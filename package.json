@@ -1,14 +1,14 @@
 {
-  "name": "skko-accessibility",
+  "name": "prodogs-template",
   "version": "1.0.0",
-  "description": "Project for development",
+  "description": "Template for site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dimavz/skko-accessibility.git"
+    "url": "git+https://github.com/dimavz/prodogs_template.git"
   },
   "keywords": [
     "galp",
@@ -19,9 +19,9 @@
   "author": "Dmitry Zatulenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dimavz/skko-accessibility/issues"
+    "url": "https://github.com/dimavz/prodogs_template/issues"
   },
-  "homepage": "https://github.com/dimavz/skko-accessibility#readme",
+  "homepage": "https://github.com/dimavz/prodogs_template#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
