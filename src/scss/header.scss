@@ -3,4 +3,129 @@
 @import "partitions/media";
 
 #header {
+
+  .wrapper_nav{
+    height: 50px;
+    width: 100%;
+    background-color: $bg_color-navpanel;
+    @include shadow_block;
+
+      .mainmenu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bg_color-navpanel;
+        height: 50px;
+        flex-wrap: wrap;
+
+        .menu_items  {
+
+          ul{
+            display: flex;
+            list-style: none;
+            color: $color-item;
+            @include clear;
+
+            li{
+              margin-right: 15px;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              font-size: 18px;
+              cursor: pointer;
+
+              a{
+                color: $link-color;
+                &:hover{
+                  color: $link-active;
+                  text-decoration: none;
+                }
+
+                i.fa-home{
+                  font-size: 24px;
+                  margin-right: 5px;
+                }
+
+                i{
+                  margin-left: 5px;
+                }
+
+              }
+
+              i{
+                margin-left: 5px;
+              }
+
+              &.active{
+
+                a{
+                  color: $link-active;
+                }
+
+              }
+
+              &:hover{
+                .dropdown{
+                  visibility: visible;
+                }
+              }
+            }
+
+            &.dropdown{
+              background-color: $bg_color-navpanel;
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 50px;
+              padding: 10px;
+              visibility: hidden;
+              border: 1px solid $link-active;
+              transition: visibility .1s .1s;
+              min-width: 300px;
+
+              li{
+                border-bottom: 1px dotted $color-item;
+                padding-left: 10px;
+
+                &:last-child{
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+
+        }
+
+        .right_block{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $link-color;
+          font-size: 18px;
+          text-transform: lowercase;
+
+          .key{
+            display: flex;
+            margin-right: 15px;
+            align-items: center;
+            cursor: pointer;
+
+            i{
+              margin-right: 5px;
+            }
+          }
+
+
+          .search{
+            margin-left: 5px;
+            border-left: 2px solid white;
+            padding-left: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+
+
+  }
+
 }
