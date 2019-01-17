@@ -203,6 +203,7 @@
             height: 200px;
             background-color: $color-background-form;
             border: 1px solid $color-link-active;
+            z-index: 1000;
             //visibility: hidden;
             //display: none;
             @include shadow_block;
