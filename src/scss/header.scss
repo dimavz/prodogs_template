@@ -7,48 +7,89 @@
   .wrapper_nav{
     height: 50px;
     width: 100%;
-    background-color: $bg_color-navpanel;
+    background-color: $color-background;
     @include shadow_block;
 
       .mainmenu{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $bg_color-navpanel;
+        background-color: $color-background;
         height: 50px;
-        //width: 1170px;
-        //flex-wrap: wrap;
 
         .menu_items  {
+          display: flex;
+          align-items: center;
+          height: 40px;
 
           ul{
+            @include clear;
             display: flex;
             list-style: none;
             color: $color-item;
-            @include clear;
+
 
             li{
+              @include clear;
               margin-right: 15px;
               text-transform: uppercase;
               display: flex;
               align-items: center;
+              height: 40px;
               font-size: 18px;
-              cursor: pointer;
+              cursor: default;
+              position: relative;
+
+              &:last-child{
+
+                .dropdown{
+                  //left: -300px;
+                  right: 0;
+                  left: auto;
+                }
+
+                &:hover{
+                  .dropdown:last-child{
+                    right: 0;
+                  }
+                }
+                right: 0;
+              }
+
+              &.active{
+                color: $color-link-active;
+              }
 
               a{
-                color: $link-color;
+                color: $color-link;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                height: 35px;
+
                 &:hover{
-                  color: $link-active;
-                  text-decoration: none;
+                  color: $color-link-active;
+
                 }
 
                 i.fa-home{
                   font-size: 24px;
                   margin-right: 5px;
+                  display: flex;
+                  align-items: center;
                 }
 
                 i{
                   margin-left: 5px;
+                  display: flex;
+                  align-items: center;
+                  height: 30px;
+                }
+
+                span{
+                  display: flex;
+                  align-items: center;
+                  height: 30px;
                 }
 
               }
@@ -57,15 +98,11 @@
                 margin-left: 5px;
               }
 
-              &.active{
 
-                a{
-                  color: $link-active;
-                }
-
-              }
 
               &:hover{
+
+                color: $color-link-active;
                 .dropdown{
                   visibility: visible;
                 }
@@ -73,25 +110,49 @@
             }
 
             &.dropdown{
-              background-color: $bg_color-navpanel;
+              background-color: $color-background;
               display: flex;
               flex-direction: column;
               position: absolute;
-              top: 50px;
+              top: 45px;
+              left: 0;
               padding: 10px;
               visibility: hidden;
-              border: 1px solid $link-active;
-              transition: visibility .1s .1s;
+              border: 1px solid $color-link-active;
+              transition: all .1s;
               min-width: 300px;
 
-              li{
+
+             li{
                 border-bottom: 1px dotted $color-item;
                 padding-left: 10px;
+                font-size: 14px;
+
+               a{
+                 text-transform: none;
+               }
+
+                &.active{
+
+                  a{
+                    color: $color-link-active;
+                    text-transform: none;
+                  }
+
+                }
 
                 &:last-child{
                   border-bottom: none;
                 }
+
+
               }
+            }
+
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
             }
           }
 
@@ -101,7 +162,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          color: $link-color;
+          color: $color-link;
           font-size: 18px;
           text-transform: lowercase;
 
