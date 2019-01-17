@@ -200,12 +200,11 @@
             top: 39px;
             right: 0;
             width: 370px;
-            height: 200px;
+            height: 205px;
             background-color: $color-background-form;
             border: 1px solid $color-link-active;
             z-index: 1000;
-            //visibility: hidden;
-            //display: none;
+            display: none;
             @include shadow_block;
 
             form{

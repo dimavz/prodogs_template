@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+
+    // Вывод формы авторизации пользователя
+    $("#key").click(function(){
+        $(".key_form").slideToggle(500);
+    });
+
     //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
@@ -74,7 +80,7 @@ $(document).ready(function () {
         return false;
     });
 
-        
+
     //Прокрутка вверх при клике на кнопку
     $('.flowing-scroll').on( 'click', function(){
         var el = $(this);
