@@ -346,6 +346,18 @@
               }
             }
           }
+
+          .search_form{
+            position: absolute;
+            top: 39px;
+            right: 0;
+            width: 300px;
+            height: 200px;
+            background-color: $color-background-form;
+            border: 1px solid $color-link-active;
+            z-index: 1000;
+            @include shadow_block;
+          }
         }
       }
 
