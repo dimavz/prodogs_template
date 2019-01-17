@@ -3,13 +3,19 @@
 // Панель главного меню
 $color-background:#bc6400; //#333333;
 $color-item:#fff;
+$color-link-base:$color-background;
 $color-link-active:#f6f9ab;
 $color-link:#fff;
+
+// Форма авторизации
+$color-background-form:#ff9933;
+$color-border-input:#BC6400;
 
 
 
 //Шрифты
 $font-family: "Roboto","Arial","Times New Roman", sans-serif;
+$font-roboto-regular:"Roboto Regular";
 $font-size: 14px;
 $font-weight: normal;
 

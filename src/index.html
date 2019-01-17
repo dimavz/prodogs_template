@@ -30,26 +30,23 @@
             <nav class="mainmenu">
                 <div class="menu_items">
                     <ul>
-                        <li class="active">
-                            <a href="/">
-                                <i class="fa fa-home" aria-hidden="true"></i>
-                                <span>Главная</span>
-                            </a>
+                        <li class="item-001 active">
+
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>Главная</span>
                         </li>
-                        <li>
+                        <li class="item-002">
                             <a href="">
                                 <span>События</span>
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown">
-                                <li><a href="">Пункт 1</a></li>
-                                <li><a href="">Пункт 2</a></li>
-                                <li><a href="">Пункт 3</a></li>
-                                <li><a href="">Пункт 4</a></li>
-                                <li><a href="">Пункт 5</a></li>
+                                <li><a href="">Новости</a></li>
+                                <li><a href="">Выставки</a></li>
+                                <li><a href="">Мероприятия</a></li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li class="item-003 active">
                             <span>О собаках</span>
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
 
@@ -61,7 +58,7 @@
                                 <li><a href="">Пункт 5</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="item-004">
                             <a href="">
                                 <span>Объявления</span>
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -74,7 +71,7 @@
                                 <li><a href="">Пункт 5</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="item-005">
                             <span>Сообщество</span>
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
 
@@ -86,7 +83,7 @@
                                 <li><a href="">Пункт 5</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="item-006">
 
                             <span>Помощь</span>
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -102,20 +99,91 @@
                     </ul>
 
                 </div>
-                <div class="right_block">
-                    <div class="key">
+                <div class="menu_block">
+                    <div id="key" class="key">
                         <i class="fa fa-key fa-lg" aria-hidden="true"></i>
                         <span>Вход</span>
                     </div>
-                    <div class="search"><i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                        <span>Поиск</span></div>
+                    <div id="search" class="search"><i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        <span>Поиск</span>
+                    </div>
+                    <div class="key_form">
+                        <form action="/" method="post" id="login-form" class="form-inline">
+                            <div class="form_icon">
+                                <img src="images/header/login_form/dog_form.png" alt="" width="70px" height="110px">
+                            </div>
+                            <div class="userdata">
+                                <div id="form-login-username" class="control-group">
+                                    <div class="controls">
+                                        <div class="input-prepend">
+						                    <span class="user-icon">
+                                                <i class="fa fa-user-o" aria-hidden="true"></i>
+						                    </span>
+                                            <input id="modlgn-username" type="text" name="username" class="input-small"
+                                                   tabindex="0" size="18" placeholder="Логин">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="form-login-password" class="control-group">
+                                    <div class="controls">
+                                        <div class="input-prepend">
+                                            <span class="key-icon">
+                                                <i class="fa fa-key" aria-hidden="true"></i>
+                                            </span>
+                                            <input id="modlgn-passwd" type="password" name="password"
+                                                   class="input-small" tabindex="0" size="18" placeholder="Пароль">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="form-login-remember" class="control-group checkbox">
+                                    <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes">
+                                    <label for="modlgn-remember" class="control-label">Запомнить меня</label>
+
+                                </div>
+                                <ul class="unstyled">
+                                    <li>
+                                        <a href="/component/users/?view=remind&amp;Itemid=101">
+                                            Забыли логин?</a>
+                                    </li>
+                                    <li>
+                                        <a href="/component/users/?view=reset&amp;Itemid=101">
+                                            Забыли пароль?</a>
+                                    </li>
+                                </ul>
+                                <div id="form-login-submit" class="control-group">
+                                    <div class="controls">
+                                        <div class="button_registr">
+
+                                            <a href="/component/users/?view=registration&amp;Itemid=101">
+                                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                                Регистрация <span class="icon-arrow-right"></span></a>
+                                        </div>
+
+                                        <button type="submit" tabindex="0" name="Submit"
+                                                class="btn btn-primary login-button"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                                            Войти
+                                        </button>
+
+
+                                    </div>
+                                </div>
+
+                                <input type="hidden" name="option" value="com_users">
+                                <input type="hidden" name="task" value="user.login">
+                                <input type="hidden" name="return" value="aHR0cDovL3Byb2RvZ3MubG9jLw==">
+                                <input type="hidden" name="a2e9005004fbefb78dadaf2a7b22915d" value="1">
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
+
             </nav>
         </div>
     </div><!-- end /.wraper_nav-->
 </header>
 <section id="slider">
-
+    <a href="">Ссылка</a>
 </section>
 <footer id="footer">
 

@@ -56,8 +56,13 @@
                 right: 0;
               }
 
-              &.active{
-                color: $color-link-active;
+              &.active {
+                  color: $color-link-active;
+                }
+
+              i.fa-home{
+                font-size: 20px;
+                margin-right: 5px;
               }
 
               a{
@@ -73,17 +78,18 @@
                 }
 
                 i.fa-home{
-                  font-size: 24px;
+                  font-size: 20px;
                   margin-right: 5px;
-                  display: flex;
-                  align-items: center;
+                  //display: flex;
+                  //align-items: center;
                 }
 
                 i{
+                  @include clear;
                   margin-left: 5px;
-                  display: flex;
-                  align-items: center;
-                  height: 30px;
+                  //display: flex;
+                  //align-items: center;
+                  //height: 30px;
                 }
 
                 span{
@@ -116,12 +122,13 @@
               position: absolute;
               top: 45px;
               left: 0;
-              padding: 10px;
+              padding: 5px;
               visibility: hidden;
               border: 1px solid $color-link-active;
               transition: all .1s;
               min-width: 300px;
-
+              @include shadow_block;
+              z-index: 1000;
 
              li{
                 border-bottom: 1px dotted $color-item;
@@ -158,13 +165,14 @@
 
         }
 
-        .right_block{
+        .menu_block{
           display: flex;
           justify-content: center;
           align-items: center;
           color: $color-link;
           font-size: 18px;
           text-transform: lowercase;
+          position: relative;
 
           .key{
             display: flex;
@@ -183,6 +191,160 @@
             border-left: 2px solid white;
             padding-left: 10px;
             cursor: pointer;
+          }
+
+          .key_form{
+            @include clear;
+            padding: 5px;
+            position: absolute;
+            top: 39px;
+            right: 0;
+            width: 370px;
+            height: 200px;
+            background-color: $color-background-form;
+            border: 1px solid $color-link-active;
+            //visibility: hidden;
+            //display: none;
+            @include shadow_block;
+
+            form{
+              display: flex;
+              //justify-content: flex-start;
+              //flex-direction: column;
+              //align-items: center;
+              //height: 200px;
+
+              .form_icon{
+                margin-left: 10px;
+                width: 70px;
+                align-self: flex-start;
+              }
+
+              .userdata{
+                margin-left: 5px;
+                //float: right;
+                position: relative;
+
+                .controls{
+
+                  .input-prepend{
+                    position: relative;
+
+                    .user-icon{
+                      z-index: 100;
+                      position: absolute;
+                      left: 10px;
+                      top: 5px;
+                      color: $color-border-input;
+                    }
+
+                    .key-icon{
+                      z-index: 100;
+                      position: absolute;
+                      left: 10px;
+                      top: 5px;
+                      color: $color-border-input;
+                    }
+                  }
+                }
+
+                input{
+                  margin-bottom: 5px;
+                  border: 3px solid $color-border-input;
+                  padding-left: 30px;
+                }
+
+                #form-login-remember{
+                  display: flex;
+                  align-items: center;
+                  text-transform: none;
+                  font-size: 14px;
+
+                  input{
+                    @include clear;
+                    margin-right: 5px;
+                  }
+                }
+
+                .unstyled{
+                  @include clear;
+                  list-style: none;
+                  display: flex;
+                  justify-content: space-around;
+                  width: 270px;
+                  position: absolute;
+                  left: -10px;
+                  top: 110px;
+                  margin-bottom: 50px;
+                  text-transform: none;
+
+
+                  a{
+                    color: $color-item;
+                    font-family: $font-roboto-regular;
+                    //text-decoration: none;
+                  }
+
+                }
+
+                #form-login-submit{
+                  position: absolute;
+                  display: flex;
+                  width: 369px;
+                  justify-content: space-around;
+                  left: -90px;
+                  top: 140px;
+                  //border: 1px solid $color-border-input;
+
+                  .controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .button_registr{
+                      //padding: 5px;
+                      margin: 5px;
+                      text-transform: none;
+                      text-align: center;
+                      border: 3px solid $color-item;
+                      width: 200px;
+                      height: 40px;
+                      z-index: 100;
+
+                      &:hover{
+                        border: 3px solid $color-link-active;
+                      }
+
+                      a{
+                        color: $color-item;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        margin: 5px;
+                        text-decoration: none;
+
+                        &:hover{
+                          color: $color-link-active;
+                        }
+                      }
+
+                    }
+
+                    button{
+                      background-color: $color-background;
+                      border: 3px solid $color-item;
+                      border-radius: 0px;
+
+                      &:hover{
+                        border: 3px solid $color-link-active;
+                        color: $color-link-active;
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
           }
         }
       }
