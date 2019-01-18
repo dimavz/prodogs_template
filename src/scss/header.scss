@@ -7,14 +7,14 @@
   .wrapper_nav{
     height: 50px;
     width: 100%;
-    background-color: $color-background;
+    background-color: $color-base;
     @include shadow_block;
 
       .mainmenu{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $color-background;
+        background-color: $color-base;
         height: 50px;
 
         .menu_items  {
@@ -116,7 +116,7 @@
             }
 
             &.dropdown{
-              background-color: $color-background;
+              background-color: $color-base;
               display: flex;
               flex-direction: column;
               position: absolute;
@@ -180,6 +180,10 @@
             align-items: center;
             cursor: pointer;
 
+            &:hover{
+              color: $color-link-active;
+            }
+
             i{
               margin-right: 5px;
             }
@@ -191,6 +195,10 @@
             border-left: 2px solid white;
             padding-left: 10px;
             cursor: pointer;
+
+            &:hover{
+              color: $color-link-active;
+            }
           }
 
           .key_form{
@@ -249,9 +257,13 @@
                 }
 
                 input{
+                  font-style: italic;
                   margin-bottom: 5px;
-                  border: 3px solid $color-border-input;
+                  color: $color-border-input;
+                  border: 2px solid $color-border-input;
                   padding-left: 30px;
+                  border-radius: .3em;
+                  @include shadow_block;
                 }
 
                 #form-login-remember{
@@ -268,6 +280,7 @@
 
                 .unstyled{
                   @include clear;
+                  font-style: italic;
                   list-style: none;
                   display: flex;
                   justify-content: space-around;
@@ -302,17 +315,21 @@
                     justify-content: space-around;
 
                     .button_registr{
+                      display: flex;
+                      align-items: center;
                       //padding: 5px;
                       margin: 5px;
                       text-transform: none;
                       text-align: center;
-                      border: 3px solid $color-item;
+                      border: 2px solid $color-item;
+                      border-radius: .3em;
                       width: 200px;
-                      height: 40px;
+                      height: 35px;
                       z-index: 100;
+                      @include shadow_block;
 
                       &:hover{
-                        border: 3px solid $color-link-active;
+                        border: 2px solid $color-link-active;
                       }
 
                       a{
@@ -331,12 +348,16 @@
                     }
 
                     button{
-                      background-color: $color-background;
-                      border: 3px solid $color-item;
-                      border-radius: 0px;
+                      background-color: $color-base;
+                      color: $color-item;
+                      border: 2px solid $color-item;
+                      border-radius: .3em;
+                      height: 35px;
+                      cursor: pointer;
+                      @include shadow_block;
 
                       &:hover{
-                        border: 3px solid $color-link-active;
+                        border: 2px solid $color-link-active;
                         color: $color-link-active;
                       }
                     }
@@ -351,12 +372,64 @@
             position: absolute;
             top: 39px;
             right: 0;
-            width: 300px;
-            height: 200px;
+            width: 350px;
+            height: 120px;
             background-color: $color-background-form;
             border: 1px solid $color-link-active;
             z-index: 1000;
+            display: none;
             @include shadow_block;
+
+            form{
+              display: flex;
+
+              .icon_search{
+                margin-top: 5px;
+                width: 70px;
+
+                img{
+                  width: 100%;
+                }
+              }
+
+              .field_search{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                width: 260px;
+                //align-self: flex-end;
+
+                input{
+                  font-style: italic;
+                  color: $color-border-input;
+                  border: 2px solid $color-border-input;
+                  border-radius: .3em;
+                  width: 250px;
+                  padding-left: 10px;
+                  margin-right: 5px;
+                  margin-bottom: 15px;
+                  margin-top: 15px;
+                  @include shadow_block;
+                }
+
+                button{
+                  width: 100px;
+                  background-color: $color-button;
+                  border: 2px solid $color-border-button;
+                  color: $color-item;
+                  border-radius: .3em;
+                  cursor: pointer;
+                  margin-right: 5px;
+                  @include shadow_block;
+
+                  &:hover{
+                    border: 2px solid $color-link-active;
+                    color: $color-link-active;
+                  }
+                }
+              }
+            }
           }
         }
       }

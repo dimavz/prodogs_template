@@ -160,7 +160,7 @@
                                         </div>
 
                                         <button type="submit" tabindex="0" name="Submit"
-                                                class="btn btn-primary login-button"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                                                class="login-button"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
                                             Войти
                                         </button>
 
@@ -177,12 +177,17 @@
                         </form>
                     </div>
                     <div class="search_form">
-                        <form action="">
+                        <form action=/" method="post" class="form-inline">
                             <div class="icon_search">
-                                <img src="images/header/search_form/icon_search_form.png" alt="" width="100px">
+                                <img src="images/header/search_form/icon_search_form.png" alt="">
                             </div>
-                            
-                            Форма поиска
+                            <div class="field_search">
+                                    <input name="searchword" id="mod-search-searchword138" maxlength="200" class="inputbox search-query input-medium" type="search" placeholder="Что ищем?">
+                                    <button onclick="this.form.searchword.focus();">Найти</button>
+                                    <input type="hidden" name="task" value="search">
+                                    <input type="hidden" name="option" value="com_search">
+                                    <input type="hidden" name="Itemid" value="101">
+                            </div>
                         </form>
 
                     </div>

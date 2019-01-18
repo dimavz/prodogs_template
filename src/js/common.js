@@ -6,6 +6,10 @@ $(document).ready(function () {
         $(".key_form").slideToggle(500);
     });
 
+    $("#search").click(function(){
+        $(".search_form").slideToggle(500);
+    });
+
     //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
