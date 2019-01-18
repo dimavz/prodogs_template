@@ -39,6 +39,23 @@
           width: 100%;
           background-color: $color-background-form;
           display: none;
+
+          ul{
+            list-style: none;
+
+            li {
+              border: 1px solid $color-item;
+              a{
+                //display: block;
+                //align-items: center;
+                //border: 1px solid $color-item;
+                height: 30px;
+                //width: 100%;
+                color: $color-item;
+              }
+
+            }
+          }
         }
 
         .menu_items  {
@@ -351,8 +368,9 @@
                     justify-content: space-around;
 
                     .button_registr{
-                      display: flex;
-                      align-items: center;
+                      //display: flex;
+                      //align-items: center;
+                      //justify-content: center;
                       //padding: 5px;
                       margin: 5px;
                       text-transform: none;

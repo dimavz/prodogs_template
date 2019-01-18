@@ -32,71 +32,46 @@
                     <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                 </div>
                 <div class="mobile_items">
-                    <ul>
+                    <ul class="accordion" id="accordionMenu">
                         <li class="item-001 active">
-
                             <i class="fa fa-home" aria-hidden="true"></i>
                             <span>Главная</span>
                         </li>
-                        <li class="item-002">
+                        <li class="item-002 collapsed" data-toggle="collapse" data-target="#collapse2"
+                            aria-expanded="false" aria-controls="collapse2">
                             <a href="">
                                 <span>События</span>
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
-                            <ul class="dropdown">
+                            <ul id="collapse2" class="collapse dropdown" aria-labelledby="heading2"
+                                data-parent="#accordionMenu">
                                 <li><a href="">Новости</a></li>
                                 <li><a href="">Выставки</a></li>
                                 <li><a href="">Мероприятия</a></li>
                             </ul>
                         </li>
-                        <li class="item-003 active">
-                            <span>О собаках</span>
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-
-                            <ul class="dropdown">
-                                <li><a href="">Пункт 1</a></li>
-                                <li class="active"><a href="">Пункт 2 Активный</a></li>
-                                <li><a href="">Пункт 3</a></li>
-                                <li><a href="">Пункт 4</a></li>
-                                <li><a href="">Пункт 5</a></li>
+                        <li class="item-003 collapsed" data-toggle="collapse" data-target="#collapse3"
+                            aria-expanded="false" aria-controls="collapse3">
+                                <span>О собаках</span>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <ul id="collapse3" class="collapse dropdown" aria-labelledby="heading3"
+                                data-parent="#accordionMenu">
+                                <li><a href="">Породы собак</a></li>
+                                <li><a href="">Каталог собак</a></li>
+                                <li><a href="">Словарь собаковода</a></li>
                             </ul>
                         </li>
-                        <li class="item-004">
+                        <li class="item-004 collapsed" data-toggle="collapse" data-target="#collapse4"
+                            aria-expanded="false" aria-controls="collapse4">
                             <a href="">
                                 <span>Объявления</span>
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
-                            <ul class="dropdown">
-                                <li><a href="">Пункт 1</a></li>
-                                <li><a href="">Пункт 2</a></li>
-                                <li><a href="">Пункт 3</a></li>
-                                <li><a href="">Пункт 4</a></li>
-                                <li><a href="">Пункт 5</a></li>
-                            </ul>
-                        </li>
-                        <li class="item-005">
-                            <span>Сообщество</span>
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-
-                            <ul class="dropdown">
-                                <li><a href="">Пункт 1</a></li>
-                                <li><a href="">Пункт 2</a></li>
-                                <li><a href="">Пункт 3</a></li>
-                                <li><a href="">Пункт 4</a></li>
-                                <li><a href="">Пункт 5</a></li>
-                            </ul>
-                        </li>
-                        <li class="item-006">
-
-                            <span>Помощь</span>
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-
-                            <ul class="dropdown">
-                                <li><a href="">Пункт 1</a></li>
-                                <li><a href="">Пункт 2</a></li>
-                                <li><a href="">Пункт 3</a></li>
-                                <li><a href="">Пункт 4</a></li>
-                                <li><a href="">Пункт 5</a></li>
+                            <ul id="collapse4" class="collapse dropdown" aria-labelledby="heading4"
+                                data-parent="#accordionMenu">
+                                <li><a href="">Породы собак</a></li>
+                                <li><a href="">Каталог собак</a></li>
+                                <li><a href="">Словарь собаковода</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -209,7 +184,8 @@
                                     </div>
                                 </div>
                                 <div id="form-login-remember" class="control-group checkbox">
-                                    <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes">
+                                    <input id="modlgn-remember" type="checkbox" name="remember" class="inputbox"
+                                           value="yes">
                                     <label for="modlgn-remember" class="control-label">Запомнить меня</label>
 
                                 </div>
@@ -226,18 +202,16 @@
                                 <div id="form-login-submit" class="control-group">
                                     <div class="controls">
                                         <div class="button_registr">
-
                                             <a href="/component/users/?view=registration&amp;Itemid=101">
                                                 <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                                Регистрация <span class="icon-arrow-right"></span></a>
+                                                <span>Регистрация</span>
+                                            </a>
                                         </div>
-
                                         <button type="submit" tabindex="0" name="Submit"
-                                                class="login-button"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                                                class="login-button"><i class="fa fa-sign-in fa-lg"
+                                                                        aria-hidden="true"></i>
                                             Войти
                                         </button>
-
-
                                     </div>
                                 </div>
 
@@ -258,11 +232,12 @@
                                 <img src="images/header/search_form/icon_search_dog.png" alt="">
                             </div>
                             <div class="field_search">
-                                    <input name="searchword" id="mod-search-searchword138" maxlength="200" class="inputbox search-query input-medium" type="search" placeholder="Что ищем?">
-                                    <button onclick="this.form.searchword.focus();">Найти</button>
-                                    <input type="hidden" name="task" value="search">
-                                    <input type="hidden" name="option" value="com_search">
-                                    <input type="hidden" name="Itemid" value="101">
+                                <input name="searchword" id="mod-search-searchword138" maxlength="200"
+                                       class="inputbox search-query input-medium" type="search" placeholder="Что ищем?">
+                                <button onclick="this.form.searchword.focus();">Найти</button>
+                                <input type="hidden" name="task" value="search">
+                                <input type="hidden" name="option" value="com_search">
+                                <input type="hidden" name="Itemid" value="101">
                             </div>
                         </form>
 
