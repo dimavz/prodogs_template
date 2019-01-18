@@ -382,6 +382,7 @@
 
             form{
               display: flex;
+              position: relative;
 
               .icon_search{
                 margin-top: 5px;
@@ -390,6 +391,12 @@
                 img{
                   width: 100%;
                 }
+              }
+
+              .icon_dog{
+                position: absolute;
+                top: 55px;
+                left: 80px;
               }
 
               .field_search{
