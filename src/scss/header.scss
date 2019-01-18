@@ -11,11 +11,35 @@
     @include shadow_block;
 
       .mainmenu{
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: $color-base;
         height: 50px;
+
+        .mobile_icon{
+          @include clear;
+          padding: 5px;
+          margin-left: 10px;
+          color: $color-item;
+          //border: 1px solid $color-item;
+          @include shadow_text;
+          display: none;
+          @include devices-max-width-992px{
+            display: block;
+          }
+          cursor: pointer;
+        }
+
+        .mobile_items{
+          position: absolute;
+          top: 50px;
+          left: 0;
+          width: 100%;
+          background-color: $color-background-form;
+          display: none;
+        }
 
         .menu_items  {
           display: flex;
@@ -37,6 +61,12 @@
               align-items: center;
               height: 40px;
               font-size: 18px;
+              @include devices-max-width-1200px{
+                font-size: 16px;
+              }
+              @include devices-max-width-992px{
+                display: none;
+              }
               cursor: default;
               position: relative;
 
@@ -171,6 +201,12 @@
           align-items: center;
           color: $color-link;
           font-size: 18px;
+          @include devices-max-width-1200px{
+            font-size: 16px;
+          }
+          @include devices-max-width-992px{
+            font-size: 14px;
+          }
           text-transform: lowercase;
           position: relative;
 
