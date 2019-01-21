@@ -1,7 +1,9 @@
 /* Цвета */
 
+$color-grey:#282c2d;
+
 // Панель главного меню
-$color-base: #bc6400; //#095a3e; // #186a33;
+$color-base: $color-grey; //#bc6400; //#095a3e; // #186a33;
 $color-item:#fff;
 $color-link-base: $color-base;
 $color-link-active:#f6f9ab;
