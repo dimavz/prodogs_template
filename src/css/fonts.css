@@ -52,3 +52,13 @@
 	font-style: normal;
 	font-weight: normal;
 }
+/* font-family: "Segoe Print"; */
+@font-face {
+	font-family: "Segoe Print";
+	src: url("../fonts/SegoePrint/SegoePrint.eot");
+	src: url("../fonts/SegoePrint/SegoePrint.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/SegoePrint/SegoePrint.woff") format("woff"),
+	url("../fonts/SegoePrint/SegoePrint.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
