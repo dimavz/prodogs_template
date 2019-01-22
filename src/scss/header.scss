@@ -641,11 +641,29 @@
         margin-bottom: 10px;
       }
 
-      .banner_header{
+      .banner_468x60{
         padding: 10px;
         width: 468px;
         height: 60px;
         border: 1px solid $color-base;
+        background-color: $color-item;
+
+        @include devices-max-width-480px{
+          display: none;
+        }
+      }
+
+      .banner_300x250{
+        display: none;
+        padding: 10px;
+        width: 300px;
+        height: 250px;
+        border: 1px solid $color-base;
+        background-color: $color-item;
+
+        @include devices-max-width-480px{
+          display: block;
+        }
       }
     }
 
