@@ -313,6 +313,10 @@
             display: none;
             @include shadow_block;
 
+            @include devices-max-width-480px{
+              max-width: 300px;
+            }
+
             form{
               display: flex;
               //justify-content: flex-start;
@@ -324,12 +328,20 @@
                 margin-left: 10px;
                 width: 70px;
                 align-self: flex-start;
+
+                @include devices-max-width-480px{
+                  width: 50px;
+                }
               }
 
               .userdata{
                 margin-left: 5px;
                 //float: right;
                 position: relative;
+
+                @include devices-max-width-480px{
+                  margin-left: 25px;
+                }
 
                 .controls{
 
@@ -362,6 +374,7 @@
                   padding-left: 30px;
                   border-radius: .3em;
                   @include shadow_block;
+
                 }
 
                 #form-login-remember{
@@ -389,6 +402,10 @@
                   margin-bottom: 50px;
                   text-transform: none;
 
+                  @include devices-max-width-480px{
+                    left: -70px;
+                  }
+
 
                   a{
                     color: $color-item;
@@ -406,6 +423,10 @@
                   left: -90px;
                   top: 140px;
                   //border: 1px solid $color-border-input;
+
+                  @include devices-max-width-480px{
+                    width: 290px;
+                  }
 
                   .controls{
                     display: flex;
