@@ -18,8 +18,8 @@
 
 //Шрифты
 @mixin font-default{
-  font-family: $font-family;
-  font-size: $font-size;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
 }
 
 //Тени

@@ -2,7 +2,7 @@
 
 $color-grey:#282c2d;
 $color-base: #095a3e; //$color-grey; //#bc6400; //#095a3e; // #186a33;
-$color-background:#fff3cd;
+$color-background-base:#fff3cd;
 
 // Панель главного меню
 
@@ -22,9 +22,9 @@ $color-border-button:$color-item;
 
 
 //Шрифты
-$font-family: "Roboto","Arial","Times New Roman", sans-serif;
+$font-family-base: "Roboto","Arial","Times New Roman", sans-serif;
 $font-roboto-regular:"Roboto Regular";
-$font-size: 14px;
+$font-size-base: 14px;
 $font-weight: normal;
 $font-logo:"BrushScriptMTCursive", "Roboto";
 
