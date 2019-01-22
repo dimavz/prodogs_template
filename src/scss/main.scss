@@ -3,8 +3,7 @@
 @import "partitions/media";
 
 body{
-  font-family: $font-family-base;
-  font-size: $font-size-base;
+  @include font-default;
   background-color: $color-background-base;
 }
 

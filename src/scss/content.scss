@@ -1,0 +1,15 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#content{
+  //background-color: lighten($color-grey,5);
+
+  .wrapper_content{
+    @include clear;
+    margin-top: -10px;
+    background-color: $color-background-content;
+    border-radius: .2em;
+    @include shadow_block;
+  }
+}
