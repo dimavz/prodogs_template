@@ -17,22 +17,25 @@ $(document).ready(function () {
     //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
+        nav:true,
+        margin:50,
+        stagePadding: 40,
+        autoHeight:true,
         loop: true,
-        // dots:true,
-        margin: 30,
         autoplay: true,
         autoplayTimeout: 2000,
-        // nav:true,
         autoplayHoverPause: true,
-        // navText:['<span>Предыдущий</span>','<span>Следующий</span>'],
         responsive: {
             0: {
                 items: 1
             },
-            768: {
+            480:{
+                items: 1
+            },
+            600: {
                 items: 2
             },
-            992: {
+            800: {
                 items: 3
             },
             1200: {
