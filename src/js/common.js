@@ -17,15 +17,16 @@ $(document).ready(function () {
     //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
-        nav:true,
-        margin:50,
+        // nav:true, // Показ элементов навигации
+        dots:true, // Показывать элементы навигации в виде точек
+        margin:50, // Отступ между item`ами
         stagePadding: 40,
-        autoHeight:true,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive: {
+        autoHeight:true, //авто высота элемента
+        loop: true, // Бесконечная прокрутка
+        autoplay: true, // Автоматическое проигрывание
+        autoplayTimeout: 2000, //Время задержки автоматической прокрутки
+        autoplayHoverPause: true, //Остановка автоматической прокрутки при наведении
+        responsive: { // Отображение элементов при разрешении от и выше
             0: {
                 items: 1
             },

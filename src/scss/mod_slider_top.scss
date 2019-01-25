@@ -2,54 +2,37 @@
 @import "partitions/mixins";
 @import "partitions/media";
 
-#mod_slider_top{
-  //margin: 20px;
-  //margin-left: 50px;
-  //margin-right: 50px;
+#mod_slider_top {
+
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 5px;
-  //border: 1px solid $color-grey;
   position: relative;
 
-  //.owl-carousel{
-  //  //padding-left: 25px;
-  //
-  //  .item{
-  //    @include clear;
-  //    a{
-  //      img{
-  //        width: 220px;
-  //        height: 150px;
-  //      }
-  //    }
-  //  }
-  //}
+  .owl-nav {
+    position: relative;
+    width: 100%;
+    bottom: 130px;
 
-  //.owl-controls{
-  //  //z-index: 100;
-  //  position: absolute;
-  //  top: 35%;
-  //  width: 100%;
-  //
-  //  .owl-nav{
-  //    position: relative;
-  //
-  //    width: 100%;
-  //
-  //    .owl-prev{
-  //      position: absolute;
-  //      left: 0;
-  //      z-index: 100;
-  //    }
-  //    .owl-next{
-  //      position: absolute;
-  //      right: 0px;
-  //      z-index: 100;
-  //    }
-  //  }
-  //
-  //
-  //}
+    .owl-prev {
+      position: absolute;
+      left: 0;
+      z-index: 100;
+      cursor: pointer;
+    }
+    .owl-next {
+      position: absolute;
+      right: 0px;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    i{
+      color: darken($color-grey-light,20);
+      &:hover{
+        color:$color-base;
+      }
+    }
+  }
 
 }
