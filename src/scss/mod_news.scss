@@ -5,6 +5,8 @@
 #mod_news {
 
   padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid $color-grey-light;
 
   h2 {
     @include clear;
