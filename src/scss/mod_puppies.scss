@@ -2,15 +2,16 @@
 @import "partitions/mixins";
 @import "partitions/media";
 
-#mod_puppies{
+#mod_puppies {
 
-  .mod_title{
+  .mod_title {
     margin-left: 20px;
     display: flex;
     align-items: center;
-    height: 40px;
+    min-height: 40px;
+    flex-wrap: wrap;
 
-    h2{
+    h2 {
       @include clear;
       font-size: 20px;
       text-transform: uppercase;
@@ -18,13 +19,98 @@
       margin-right: 20px;
     }
 
-    .link_help{
-      a{
+    .link_help {
+      a {
         color: $color-grey;
         text-decoration: underline;
 
       }
     }
+
+  }
+
+  .filters {
+    padding: 5px;
+    min-height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: $color-base;
+    display: flex;
+    align-items: center;
+
+    .arrows {
+      margin-left: 20px;
+      margin-right: 20px;
+      max-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      i {
+        @include clear;
+        color: $color-link-active;
+        font-weight: bold;
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+        &.fa-lg {
+          font-size: 18px;
+          padding-top: 3px;
+        }
+
+        &.fa-2x {
+          font-size: 24px;
+        }
+
+        &.fa-3x {
+          font-size: 34px;
+        }
+      }
+    }
+
+    form{
+      min-height: 40px;
+
+      .form-row{
+        display: flex;
+        align-items: center;
+
+        .form-group{
+          @include clear;
+          padding: 5px;
+          
+          select{
+            background-color:$color-background-base;
+            border: 2px solid $color-background-base;
+            border-radius: .3em;
+          }
+        }
+
+        button {
+          min-height: 40px;
+          margin: 5px;
+          background-color: $color-base;
+          border: 2px solid $color-background-base;
+          border-radius: .3em;
+          //min-width: 70px;
+          align-self: center;
+
+          i, span{
+            color: $color-background-base;
+            font-size:18px;
+          }
+
+          span{
+            text-transform: uppercase;
+          }
+
+        }
+
+      }
+    }
+
+
 
 
   }
