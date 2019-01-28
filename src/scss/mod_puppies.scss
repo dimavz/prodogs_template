@@ -1,0 +1,32 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#mod_puppies{
+
+  .mod_title{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    h2{
+      @include clear;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $color-base;
+      margin-right: 20px;
+    }
+
+    .link_help{
+      a{
+        color: $color-grey;
+        text-decoration: underline;
+
+      }
+    }
+
+
+  }
+
+}
