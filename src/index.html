@@ -451,99 +451,249 @@
                         <i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>
                     </div>
                     <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-2 col-sm-6">
-                                    <select id="breed" class="form-control">
-                                        <option selected>Порода</option>
-                                        <option>Австралийская овчарка</option>
-                                        <option>Сибирский хаски</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2 col-sm-6">
-                                    <select id="sex" class="form-control">
-                                        <option selected>Пол</option>
-                                        <option>Мужской</option>
-                                        <option>Женский</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2 col-sm-6">
-                                    <select id="birthday" class="form-control">
-                                        <option selected>Дата рождения</option>
-                                        <option>Календарь</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2 col-sm-6">
-                                    <select id="map" class="form-control">
-                                        <option selected>Местоположение</option>
-                                        <option>Карта</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2 col-sm-6">
-                                    <select id="price" class="form-control">
-                                        <option selected>Цена</option>
-                                        <option>500 руб.</option>
-                                    </select>
-                                </div>
-                                <button type="submit">
-                                    <i class="fa fa-filter" aria-hidden="true"></i>
-                                    <span>Выбрать</span>
-                                </button>
+                        <div class="form-row">
+                            <div class="form-group col-md-2 col-sm-6">
+                                <select id="breed" class="form-control">
+                                    <option selected>Порода</option>
+                                    <option>Австралийская овчарка</option>
+                                    <option>Сибирский хаски</option>
+                                </select>
                             </div>
+                            <div class="form-group col-md-2 col-sm-6">
+                                <select id="sex" class="form-control">
+                                    <option selected>Пол</option>
+                                    <option>Мужской</option>
+                                    <option>Женский</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2 col-sm-6">
+                                <select id="birthday" class="form-control">
+                                    <option selected>Дата рождения</option>
+                                    <option>Календарь</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2 col-sm-6">
+                                <select id="map" class="form-control">
+                                    <option selected>Местоположение</option>
+                                    <option>Карта</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2 col-sm-6">
+                                <select id="price" class="form-control">
+                                    <option selected>Цена</option>
+                                    <option>500 руб.</option>
+                                </select>
+                            </div>
+                            <button type="submit">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                                <span>Выбрать</span>
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div class="block_cards">
                     <div class="row">
-                        <div class="col-3">
-                            <div class="card">
+                        <div class="col-12  col-sm-6 col-lg-3">
+                            <div class="wrap_card">
                                 <div class="meta_info">
                                     <div class="top">
                                         <i class="fa fa-star fa-lg" aria-hidden="true"></i>
                                         <span>Top</span></div>
                                     <div class="price">$250</div>
                                 </div>
-                                <div class="content_card">
-                                    <img src="images/content/mod_puppies/img_card001.jpg" alt="">
-                                    <div class="breed">Сибирский хаски</div>
-                                    <div class="fields">
-                                        <div class="sex"><i class="fa fa-mars" aria-hidden="true"></i>
-                                        <span>Мальчик</span></div>
-                                        <div class="birthday">
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            <span>19 ноября 2018</span>
+                                <div class="flip_card">
+                                    <div class="front_card">
+                                        <a href="">
+                                            <img src="images/content/mod_puppies/img_card001.jpg" alt="">
+                                        </a>
+                                        <div class="breed">Сибирский хаски</div>
+                                        <div class="fields">
+                                            <div class="sex"><i class="fa fa-mars" aria-hidden="true"></i>
+                                                <span>Мальчик</span></div>
+                                            <div class="birthday">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                <span>19 ноября 2018</span>
+                                            </div>
+                                            <div class="adress">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>Беларусь,г.Минск,ул.Руссиянова 12</span>
+                                            </div>
                                         </div>
-                                        <div class="adress">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>Беларусь, г.Минск, ул. Руссиянова 12</span>
-                                        </div>
-                                    </div>
-                                    <div class="hide_block">
+                                    </div><!-- end/.front_card-->
+                                    <div class="back_card">
                                         <div class="text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque
-                                                delectus dolores, error, excepturi explicabo in iste labore magnam
-                                                necessitatibus pariatur quod recusandae saepe sapiente similique sunt.
-                                                Aliquid, porro!
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                                                asperiores beatae blanditiis corporis culpa in ipsam ipsum labore
+                                                mollitia nesciunt nihil nisi, nulla perspiciatis qui ratione
+                                                repudiandae, unde, vel velit.
                                             </p>
-                                            <p>Atque earum error illum laboriosam quia voluptate! Accusantium
-                                                consectetur consequuntur delectus dicta dolorem earum eligendi iste
-                                                magni maiores molestiae molestias odio, quas, quasi quibusdam quidem
-                                                recusandae rem sit suscipit ullam.
+                                            <p>Aliquid harum iusto minus nihil possimus. Accusantium aliquid at
+                                                cupiditate deleniti, eligendi, fuga impedit inventore laborum magni
+                                                natus omnis pariatur porro praesentium quas sit, soluta tempora velit
+                                                veritatis voluptate voluptates.
                                             </p>
                                         </div>
                                         <div class="link_more">
                                             <a href="">
                                                 <span>Подробнее</span>
                                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
-
                                             </a>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">Объявление2</div>
-                        <div class="col-3">Объявление3</div>
-                        <div class="col-3">Объявление4</div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="wrap_card">
+                                <div class="meta_info">
+                                    <div class="top">
+                                        <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                                        <span>Top</span></div>
+                                    <div class="price">$250</div>
+                                </div>
+                                <div class="flip_card">
+                                    <div class="front_card">
+                                        <a href="">
+                                            <img src="images/content/mod_puppies/img_card002.jpg" alt="">
+                                        </a>
+                                        <div class="breed">Австралийский шелковистый
+                                            терьер</div>
+                                        <div class="fields">
+                                            <div class="sex"><i class="fa fa-mars" aria-hidden="true"></i>
+                                                <span>Мальчик</span></div>
+                                            <div class="birthday">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                <span>19 ноября 2018</span>
+                                            </div>
+                                            <div class="adress">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>Беларусь,г.Минск,ул.Руссиянова 12</span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end/.front_card-->
+                                    <div class="back_card">
+                                        <div class="text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                                                asperiores beatae blanditiis corporis culpa in ipsam ipsum labore
+                                                mollitia nesciunt nihil nisi, nulla perspiciatis qui ratione
+                                                repudiandae, unde, vel velit.
+                                            </p>
+                                            <p>Aliquid harum iusto minus nihil possimus. Accusantium aliquid at
+                                                cupiditate deleniti, eligendi, fuga impedit inventore laborum magni
+                                                natus omnis pariatur porro praesentium quas sit, soluta tempora velit
+                                                veritatis voluptate voluptates.
+                                            </p>
+                                        </div>
+                                        <div class="link_more">
+                                            <a href="">
+                                                <span>Подробнее</span>
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="wrap_card">
+                                <div class="meta_info">
+                                    <div class="top">
+                                        <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                                        <span>Top</span></div>
+                                    <div class="price">$250</div>
+                                </div>
+                                <div class="flip_card">
+                                    <div class="front_card">
+                                        <a href="">
+                                            <img src="images/content/mod_puppies/img_card003.jpg" alt="">
+                                        </a>
+                                        <div class="breed">Американский бульдог</div>
+                                        <div class="fields">
+                                            <div class="sex"><i class="fa fa-mars" aria-hidden="true"></i>
+                                                <span>Мальчик</span></div>
+                                            <div class="birthday">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                <span>19 ноября 2018</span>
+                                            </div>
+                                            <div class="adress">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>Беларусь,г.Минск,ул.Руссиянова 12</span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end/.front_card-->
+                                    <div class="back_card">
+                                        <div class="text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                                                asperiores beatae blanditiis corporis culpa in ipsam ipsum labore
+                                                mollitia nesciunt nihil nisi, nulla perspiciatis qui ratione
+                                                repudiandae, unde, vel velit.
+                                            </p>
+                                            <p>Aliquid harum iusto minus nihil possimus. Accusantium aliquid at
+                                                cupiditate deleniti, eligendi, fuga impedit inventore laborum magni
+                                                natus omnis pariatur porro praesentium quas sit, soluta tempora velit
+                                                veritatis voluptate voluptates.
+                                            </p>
+                                        </div>
+                                        <div class="link_more">
+                                            <a href="">
+                                                <span>Подробнее</span>
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="wrap_card">
+                                <div class="meta_info">
+                                    <div class="top">
+                                        <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                                        <span>Top</span></div>
+                                    <div class="price">$250</div>
+                                </div>
+                                <div class="flip_card">
+                                    <div class="front_card">
+                                        <a href="">
+                                            <img src="images/content/mod_puppies/img_card004.jpg" alt="">
+                                        </a>
+                                        <div class="breed">Английский коккер-спаниель</div>
+                                        <div class="fields">
+                                            <div class="sex"><i class="fa fa-mars" aria-hidden="true"></i>
+                                                <span>Мальчик</span></div>
+                                            <div class="birthday">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                <span>19 ноября 2018</span>
+                                            </div>
+                                            <div class="adress">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>Беларусь,г.Минск,ул.Руссиянова 12</span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end/.front_card-->
+                                    <div class="back_card">
+                                        <div class="text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                                                asperiores beatae blanditiis corporis culpa in ipsam ipsum labore
+                                                mollitia nesciunt nihil nisi, nulla perspiciatis qui ratione
+                                                repudiandae, unde, vel velit.
+                                            </p>
+                                            <p>Aliquid harum iusto minus nihil possimus. Accusantium aliquid at
+                                                cupiditate deleniti, eligendi, fuga impedit inventore laborum magni
+                                                natus omnis pariatur porro praesentium quas sit, soluta tempora velit
+                                                veritatis voluptate voluptates.
+                                            </p>
+                                        </div>
+                                        <div class="link_more">
+                                            <a href="">
+                                                <span>Подробнее</span>
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
