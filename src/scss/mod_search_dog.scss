@@ -1,0 +1,191 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#mod_search_dog {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .mod_title {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    flex-wrap: wrap;
+
+    h2 {
+      @include clear;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $color-base;
+      margin-right: 20px;
+    }
+
+    .link_help {
+      a {
+        color: $color-grey;
+        text-decoration: underline;
+
+      }
+    }
+
+  }
+
+  .block_posts {
+    margin: 10px;
+
+    .post {
+      padding: 5px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &:hover{
+        .message{
+          display: block;
+          top: 0%;
+          //transform: translate(0,0px);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 265px;
+      }
+
+      .info {
+        padding: 10px;
+
+        .calendar {
+
+          span {
+            font-weight: bold;
+
+            &.day {
+              font-weight: normal;
+            }
+          }
+
+          i {
+            color: $color-red;
+            margin-right: 5px;
+            font-size: 16px;
+          }
+        }
+
+        .map {
+
+          span {
+            font-weight: bold;
+
+            &.day {
+              font-weight: normal;
+            }
+          }
+
+          i {
+            color: $color-red;
+            margin-right: 5px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .message{
+        //display: none;
+        padding: 10px;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        background-color: $color-item;
+        transition: all 1s ease-in-out;
+        height: 280px;
+
+        .text{
+          width: 100%;
+          height: 180px;
+          margin-bottom: 10px;
+          overflow: hidden;
+        }
+
+        .contacts{
+          margin-left: 5px;
+
+          .phones{
+
+
+            .mobile{
+              display: flex;
+              align-items: center;
+              i{
+                font-size: 22px;
+              }
+            }
+
+            .phone{
+              display: flex;
+              align-items: center;
+            }
+            i{
+              color: $color-base;
+              font-size: 20px;
+              margin-right: 5px;
+            }
+            span{
+              font-weight: bold;
+            }
+          }
+
+          .skype{
+            display: flex;
+            align-items: center;
+
+            i{
+              color: dodgerblue;
+              font-size: 20px;
+              margin-right: 5px;
+            }
+            span{
+              font-weight: bold;
+            }
+          }
+        }
+
+        .link{
+          //margin: 10px;
+          position: absolute;
+          min-height: 30px;
+          min-width: 120px;
+          right: 20px;
+          bottom: 20px;
+          background-color: $color-base;
+          border-radius: .3em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover{
+            @include shadow_block;
+          }
+
+          a{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            color: $color-item;
+            text-decoration: none;
+
+            &:hover{
+              color: $color-link-active;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
