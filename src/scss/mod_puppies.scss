@@ -37,63 +37,53 @@
     background-color: $color-base;
     display: flex;
     align-items: center;
-
-    .arrows {
-      margin-left: 20px;
-      margin-right: 20px;
-      max-height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      i {
-        @include clear;
-        color: $color-link-active;
-        font-weight: bold;
-        height: 40px;
-        display: flex;
-        align-items: center;
-
-        &.fa-lg {
-          font-size: 18px;
-          padding-top: 3px;
-        }
-
-        &.fa-2x {
-          font-size: 24px;
-        }
-
-        &.fa-3x {
-          font-size: 34px;
-        }
-      }
-    }
+    justify-content: center;
 
     form {
       min-height: 40px;
+      margin-left: 5px;
 
       .form-row {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         .form-group {
           @include clear;
           padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           select {
             background-color: $color-background-base;
             border: 2px solid $color-background-base;
             border-radius: .3em;
+            min-width: 150px;
+            font-size: 14px;
+
+            @include devices-max-width-992px{
+              font-size: 16px;
+            }
+
+            @include devices-min-width-1200px{
+              min-width: 180px;
+            }
+
           }
         }
 
         button {
+          width: 100%;
+
+          @include devices-max-width-768px{
+            width: 50%;
+          }
           min-height: 40px;
-          margin: 5px;
+          //margin: 5px;
           background-color: $color-base;
           border: 2px solid $color-background-base;
           border-radius: .3em;
-          //min-width: 70px;
           align-self: center;
 
           i, span {
@@ -118,7 +108,13 @@
       padding: 10px;
       width: 100%;
       height: 450px;
-      margin-bottom: 40px;
+      @include devices-min-width-480px{
+        height: 550px;
+      }
+      @include devices-min-width-600px{
+        height: 450px;
+      }
+      margin-bottom: 10px;
 
       .meta_info {
         display: flex;
@@ -176,12 +172,38 @@
           //border-radius: .3em;
           backface-visibility: hidden;
           height: 400px;
+          @include devices-min-width-480px{
+            height: 500px;
+          }
+          @include devices-min-width-600px{
+            height: 400px;
+          }
           overflow: hidden;
           //text-align: center;
 
           img {
             width: 100%;
             height: 140px;
+
+            @include devices-min-width-320px{
+              height: 180px;
+            }
+
+            @include devices-min-width-480px{
+              height: 300px;
+            }
+            @include devices-min-width-600px{
+              height: 160px;
+            }
+            @include devices-min-width-768px{
+              height: 200px;
+            }
+            @include devices-min-width-800px{
+              height: 210px;
+            }
+            @include devices-min-width-992px{
+              height: 140px;
+            }
           }
 
           .breed {
@@ -220,6 +242,12 @@
           width: 100%;
           //height: 100%;
           height: 400px;
+          @include devices-min-width-480px{
+            height: 500px;
+          }
+          @include devices-min-width-600px{
+            height: 400px;
+          }
           backface-visibility: hidden;
           overflow: hidden;
           border: 1px solid $color-base;
@@ -230,7 +258,7 @@
           flex-direction: column;
           @include shadow_block;
 
-          .text{
+          .text {
             height: 330px;
             overflow: hidden;
           }
@@ -266,11 +294,41 @@
               }
             }
 
+          }
+        }
+      }
+    }
+
+  }
+
+  .mod_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .all_post, .add_post {
+      padding: 5px;
+
+      a {
+        color: $color-grey;
+        font-size: 14px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: $color-base;
+        }
+
+        i{
+          font-size: 18px;
+          margin-right: 5px;
         }
       }
     }
   }
-
-}
 
 }
