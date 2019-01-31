@@ -35,28 +35,134 @@
     margin: 10px;
 
     .post {
+      margin-bottom: 5px;
       padding: 5px;
       width: 100%;
-      position: relative;
-      overflow: hidden;
+      //overflow: hidden;
+      //border: 1px solid $color-grey-light;
 
       &:hover{
-        .message{
-          display: block;
-          top: 0%;
-          //transform: translate(0,0px);
+        .wrap_post{
+
+          .message{
+            opacity: 1;
+            top: 0%;
+          }
         }
       }
 
-      img {
+      .wrap_post{
+        position: relative;
         width: 100%;
         height: 265px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all 1s;
+        }
+
+        .message{
+          opacity: 0;
+          padding: 10px;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: $color-item;
+          transition: all 1s ease-in-out;
+          height: 100%;
+
+          .text{
+            width: 100%;
+            height: 180px;
+            margin-bottom: 10px;
+            overflow: hidden;
+          }
+
+          .contacts{
+            margin-left: 0px;
+
+            .phones{
+
+              .mobile{
+                display: flex;
+                align-items: center;
+                i{
+                  font-size: 22px;
+                }
+              }
+
+              .phone{
+                display: flex;
+                align-items: center;
+              }
+              i{
+                color: $color-base;
+                font-size: 20px;
+                margin-right: 5px;
+              }
+              span{
+                font-weight: bold;
+              }
+            }
+
+            .skype{
+              display: flex;
+              align-items: center;
+
+              i{
+                color: dodgerblue;
+                font-size: 20px;
+                margin-right: 5px;
+              }
+              span{
+                font-weight: bold;
+              }
+            }
+          }
+
+          .link{
+            //margin: 10px;
+            position: absolute;
+            min-height: 30px;
+            min-width: 120px;
+            right: 20px;
+            bottom: 20px;
+            background-color: $color-base;
+            border-radius: .3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+              @include shadow_block;
+            }
+
+            a{
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              width: 100%;
+              height: 100%;
+              color: $color-item;
+              text-decoration: none;
+
+              &:hover{
+                color: $color-link-active;
+              }
+            }
+          }
+
+        }
       }
+
+
 
       .info {
         padding: 10px;
 
-        .calendar {
+        .event {
 
           span {
             font-weight: bold;
@@ -91,99 +197,7 @@
         }
       }
 
-      .message{
-        //display: none;
-        padding: 10px;
-        position: absolute;
-        top: -100%;
-        left: 0;
-        background-color: $color-item;
-        transition: all 1s ease-in-out;
-        height: 280px;
 
-        .text{
-          width: 100%;
-          height: 180px;
-          margin-bottom: 10px;
-          overflow: hidden;
-        }
-
-        .contacts{
-          margin-left: 5px;
-
-          .phones{
-
-
-            .mobile{
-              display: flex;
-              align-items: center;
-              i{
-                font-size: 22px;
-              }
-            }
-
-            .phone{
-              display: flex;
-              align-items: center;
-            }
-            i{
-              color: $color-base;
-              font-size: 20px;
-              margin-right: 5px;
-            }
-            span{
-              font-weight: bold;
-            }
-          }
-
-          .skype{
-            display: flex;
-            align-items: center;
-
-            i{
-              color: dodgerblue;
-              font-size: 20px;
-              margin-right: 5px;
-            }
-            span{
-              font-weight: bold;
-            }
-          }
-        }
-
-        .link{
-          //margin: 10px;
-          position: absolute;
-          min-height: 30px;
-          min-width: 120px;
-          right: 20px;
-          bottom: 20px;
-          background-color: $color-base;
-          border-radius: .3em;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          &:hover{
-            @include shadow_block;
-          }
-
-          a{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-            height: 100%;
-            color: $color-item;
-            text-decoration: none;
-
-            &:hover{
-              color: $color-link-active;
-            }
-          }
-        }
-
-      }
     }
   }
 
