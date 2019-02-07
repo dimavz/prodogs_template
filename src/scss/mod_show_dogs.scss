@@ -183,16 +183,15 @@
           top: 0;
           left: 0;
           width: 100%;
-          //height: 100%;
           border: 1px solid $color-base;
           //border-radius: .3em;
           backface-visibility: hidden;
-          height: 400px;
+          height: 500px;
           @include devices-min-width-480px {
             height: 500px;
           }
           @include devices-min-width-600px {
-            height: 400px;
+            height: 430px;
           }
           overflow: hidden;
           //text-align: center;
@@ -283,6 +282,26 @@
 
             }
 
+            .adress{
+
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+
+              .label{
+                //display: flex;
+                font-weight: bold;
+                margin-bottom: 5px;
+
+                i{
+                  color: $color-base;
+                  margin-right: 10px;
+                  font-size: 18px;
+                }
+              }
+            }
+
           }
         }
 
@@ -298,7 +317,7 @@
             height: 500px;
           }
           @include devices-min-width-600px {
-            height: 400px;
+            height: 430px;
           }
           backface-visibility: hidden;
           overflow: hidden;
@@ -311,7 +330,7 @@
           @include shadow_block;
 
           .text {
-            height: 330px;
+            height: 360px;
             overflow: hidden;
           }
 
