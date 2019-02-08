@@ -31,92 +31,7 @@
 
   }
 
-  .filters {
-    padding: 5px;
-    min-height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: $color-base;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    form {
-      min-height: 40px;
-      margin-left: 5px;
-
-      .form-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .form-group {
-          @include clear;
-          padding: 5px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .select {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-            min-width: 180px;
-            border-radius: .3em;
-
-            select {
-              width: 100%;
-              appearance: none;
-              background-color: $color-background-base;
-              border: 2px solid lighten($color-base, 15);
-              border-radius: .3em;
-
-              @include devices-max-width-992px {
-                font-size: 16px;
-              }
-
-            }
-            i {
-              position: absolute;
-              right: 10px;
-              color: $color-base;
-              //z-index: 100;
-            }
-
-          }
-
-        }
-
-        button {
-          width: 100%;
-
-          @include devices-max-width-600px {
-            width: 50%;
-          }
-          min-height: 40px;
-          //margin: 5px;
-          background-color: $color-base;
-          border: 2px solid $color-background-base;
-          border-radius: .3em;
-          align-self: center;
-
-          i, span {
-            color: $color-background-base;
-            font-size: 18px;
-          }
-
-          span {
-            text-transform: uppercase;
-          }
-
-        }
-
-      }
-    }
-
-  }
 
   .block_cards {
 
@@ -238,8 +153,11 @@
             flex-direction: column;
             align-items: flex-start;
             margin-left: 20px;
-
             padding: 10px;
+
+            i{
+              color: $color-base;
+            }
 
             .period{
               display: flex;
@@ -253,7 +171,7 @@
                 margin-bottom: 5px;
 
                 i{
-                  color: $color-base;
+                  //color: $color-base;
                   margin-right: 10px;
                   font-size: 18px;
                 }
@@ -274,7 +192,7 @@
                 margin-bottom: 5px;
 
                 i{
-                  color: $color-base;
+                  //color: $color-base;
                   margin-right: 10px;
                   font-size: 18px;
                 }
@@ -282,12 +200,10 @@
 
             }
 
-            .adress{
-
+            .geo{
+              margin-top: 5px;
               display: flex;
               flex-direction: column;
-              align-items: center;
-              justify-content: flex-start;
 
               .label{
                 //display: flex;
@@ -295,10 +211,14 @@
                 margin-bottom: 5px;
 
                 i{
-                  color: $color-base;
+                  //color: $color-base;
                   margin-right: 10px;
                   font-size: 18px;
                 }
+              }
+
+              span{
+                text-align: center;
               }
             }
 
@@ -366,6 +286,86 @@
             }
 
           }
+        }
+      }
+    }
+
+  }
+
+  .filters {
+    padding: 5px;
+    min-height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: $color-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      min-height: 40px;
+
+      .form-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .form-group {
+          @include clear;
+          margin: 5px;
+          min-width: 200px;
+
+          .select {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            border-radius: .3em;
+
+            select {
+              appearance: none;
+              background-color: $color-background-base;
+              border: 2px solid lighten($color-base, 15);
+              border-radius: .3em;
+
+              @include devices-max-width-992px {
+                font-size: 16px;
+              }
+
+            }
+            i {
+              position: absolute;
+              right:10px;
+              color: $color-base;
+              //z-index: 100;
+            }
+
+          }
+
+          button {
+            width: 100%;
+
+            @include devices-max-width-600px {
+              width: 50%;
+            }
+            min-height: 40px;
+            //margin: 5px;
+            background-color: $color-base;
+            border: 2px solid $color-background-base;
+            border-radius: .3em;
+            align-self: center;
+
+            i, span {
+              color: $color-background-base;
+              font-size: 18px;
+            }
+
+            span {
+              text-transform: uppercase;
+            }
+
+          }
+
         }
       }
     }
