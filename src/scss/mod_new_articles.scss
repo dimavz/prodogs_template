@@ -4,9 +4,12 @@
 
 #mod_new_articles {
   margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $color-grey-light;
 
   .mod_title {
     margin-left: 20px;
+    margin-bottom: 10px;
 
     h2 {
       @include clear;
@@ -32,12 +35,18 @@
 
       &:hover{
         border-bottom: solid 3px $color-base;
+        a.img{
+          img{
+            opacity: 1;
+          }
+        }
       }
 
       a.img{
         width: 100%;
         img{
           width: 100%;
+          opacity: .8;
         }
       }
       .data{
@@ -56,8 +65,12 @@
   }
 
   .all_articles{
-    margin-top: 10px;
+    //margin-top: 5px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
     a{
       color: $color-grey;
       text-decoration: none;

@@ -1,0 +1,59 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#mod_slider_bottom {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  position: relative;
+  border-bottom: 2px solid $color-grey-light;
+
+  .owl-nav {
+    position: relative;
+    width: 100%;
+    bottom: 130px;
+
+    @include devices-min-width-480px{
+      bottom: 160px;
+    }
+
+    @include devices-min-width-600px{
+      bottom: 120px;
+    }
+
+    @include devices-min-width-768px{
+      bottom: 150px;
+    }
+
+    @media only screen and (min-width: 800px) {
+      bottom: 110px;
+    }
+
+    @include devices-min-width-992px{
+      bottom: 130px;
+    }
+
+    .owl-prev {
+      position: absolute;
+      left: 0;
+      z-index: 100;
+      cursor: pointer;
+    }
+    .owl-next {
+      position: absolute;
+      right: 0px;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    i{
+      color: darken($color-grey-light,20);
+      &:hover{
+        color:$color-base;
+      }
+    }
+  }
+
+}
