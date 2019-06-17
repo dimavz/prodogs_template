@@ -3,10 +3,11 @@
 @import "partitions/media";
 
 #footer{
-  min-height: 100px;
+  min-height: 50px;
   background-color: $color-base;
 
   .footer_top{
+
     .wrap_footer_top{
       display: flex;
       padding: 10px;
