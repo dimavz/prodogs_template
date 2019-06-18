@@ -1,0 +1,39 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#top_breadcrumbs, #bottom_breadcrumbs{
+  @include clear;
+  min-height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: $color-base;
+  @include shadow_block;
+  display: flex;
+  align-items: center;
+
+  ul {
+    @include clear;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 20px;
+    list-style-type: none;
+
+    li{
+      color: $color-background-base;
+      margin-left: 10px;
+
+      span{
+        color: $color-background-base;
+
+      }
+
+      a{
+        color: $color-item;
+      }
+    }
+  }
+}
