@@ -11,25 +11,26 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     clean = require('gulp-dest-clean');
 
-var config ={
-    paths:{
-        scss:'src/scss/**/*.scss',
-        css:'src/css/**/*.css',
-        html:'src/*.html',
-        js:'src/**/*.js'
+
+var config = {
+    paths: {
+        scss: 'src/scss/**/*.scss',
+        css: 'src/css/**/*.css',
+        html: 'src/*.html',
+        js: 'src/**/*.js'
     },
-    output:{
-        nameFileCss:'main.css',
-        pathCss:'src/css',
-        pathDistCss:'dist/css',
-        pathDistHtml:'dist'
+    output: {
+        nameFileCss: 'main.css',
+        pathCss: 'src/css',
+        pathDistCss: 'dist/css',
+        pathDistHtml: 'dist'
     },
-    srv_options:{
-        basePath:'src'
+    srv_options: {
+        basePath: 'src'
     }
 };
 
-gulp.task('browser', function(){
+gulp.task('browser', function () {
     browser({
         server: {
             baseDir: config.srv_options.basePath
@@ -44,21 +45,21 @@ gulp.task('scss', function () {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(concat(config.output.nameFileCss))
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.pathCss))
         .pipe(browser.reload({stream: true}));
 });
 
-gulp.task('minify-css', function() {
+gulp.task('minify-css', function () {
     return gulp.src(config.paths.css)
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(config.output.pathDistCss));
 });
 
-gulp.task('minify-html', function()  {
+gulp.task('minify-html', function () {
     return gulp.src(config.paths.html)
-        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(config.output.pathDistHtml));
 });
 
@@ -69,15 +70,14 @@ gulp.task('clean', function () {
 });
 
 
-
-gulp.task('watch',['scss','browser'], function () {
-    gulp.watch(config.paths.scss, ['scss'],browser.reload);
-    gulp.watch(config.paths.html,browser.reload);
-    gulp.watch(config.paths.js,browser.reload);
-    gulp.watch(config.paths.css,browser.reload);
+gulp.task('watch', function () {
+    gulp.watch(config.paths.scss, 'scss', browser.reload);
+    gulp.watch(config.paths.html, browser.reload);
+    gulp.watch(config.paths.js, browser.reload);
+    gulp.watch(config.paths.css, browser.reload);
 });
 
-gulp.task('build', ['clean', 'scss'], function() {
+gulp.task('build', gulp.series('clean', 'scss'), function () {
 
     var buildCss = gulp.src(config.paths.css)
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -99,6 +99,6 @@ gulp.task('build', ['clean', 'scss'], function() {
 
 });
 
-gulp.task('default',['watch']);
+gulp.task('default', gulp.series('browser','scss','watch' ));
 
 
