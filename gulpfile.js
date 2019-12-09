@@ -1,15 +1,12 @@
-/**
- * Created by Дмитрий on 19.12.2017.
- */
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    browser = require('browser-sync'),
-    cleanCSS = require('gulp-clean-css'),
-    htmlmin = require('gulp-htmlmin'),
-    clean = require('gulp-dest-clean');
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+var cleanCSS = require('gulp-clean-css');
+var htmlmin = require('gulp-htmlmin');
+var clean = require('gulp-dest-clean');
 
 
 var config = {
@@ -30,34 +27,26 @@ var config = {
     }
 };
 
-gulp.task('browser', function () {
-    browser({
-        server: {
-            baseDir: config.srv_options.basePath
-        },
-        notify: false
-    });
-});
-
-
-gulp.task('scss', function () {
+gulp.task('sass', function(done) {
     gulp.src(config.paths.scss)
         .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer())
         .pipe(concat(config.output.nameFileCss))
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.output.pathCss))
-        .pipe(browser.reload({stream: true}));
+        .pipe(browserSync.stream());
+
+    done();
 });
 
-gulp.task('minify-css', function () {
+gulp.task('min-css', function () {
     return gulp.src(config.paths.css)
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(config.output.pathDistCss));
 });
 
-gulp.task('minify-html', function () {
+gulp.task('min-html', function () {
     return gulp.src(config.paths.html)
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(config.output.pathDistHtml));
@@ -69,36 +58,61 @@ gulp.task('clean', function () {
         .pipe(clean('dist'));
 });
 
+gulp.task('buildCss', function () {
 
-gulp.task('watch', function () {
-    gulp.watch(config.paths.scss, 'scss', browser.reload);
-    gulp.watch(config.paths.html, browser.reload);
-    gulp.watch(config.paths.js, browser.reload);
-    gulp.watch(config.paths.css, browser.reload);
-});
-
-gulp.task('build', gulp.series('clean', 'scss'), function () {
-
-    var buildCss = gulp.src(config.paths.css)
+    return gulp.src(config.paths.css)
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest(config.output.pathDistCss))
-
-    var buildFonts = gulp.src('src/fonts/**/*') // Переносим шрифты в продакшен
-        .pipe(gulp.dest('dist/fonts'))
-
-    // Переносим скрипты в продакшен
-    var buildJs = gulp.src('src/js/**/*')
-        .pipe(gulp.dest('dist/js'))
-    var buildLibsJs = gulp.src('src/libs/**/*')
-        .pipe(gulp.dest('dist/libs'))
-
-    var buildHtml = gulp.src('src/*.html') // Переносим HTML в продакшен
-        .pipe(gulp.dest('dist'))
-    var buildImages = gulp.src('src/images/**/*') // Переносим изображения в продакшен
-        .pipe(gulp.dest('dist/images'));
-
+        .pipe(gulp.dest(config.output.pathDistCss));
 });
 
-gulp.task('default', gulp.series('browser','scss','watch' ));
+gulp.task('buildFonts', function () {
 
+    return gulp.src('src/fonts/**/*') // Переносим шрифты в продакшен
+        .pipe(gulp.dest('dist/fonts'));
+});
 
+gulp.task('buildJs', function () {
+
+    return gulp.src('src/js/**/*')
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('buildLibsJs', function () {
+
+    return gulp.src('src/libs/**/*')
+        .pipe(gulp.dest('dist/libs'));
+});
+
+gulp.task('buildHtml', function () {
+    return gulp.src('src/*.html') // Переносим HTML в продакшен
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('buildHtml', function () {
+    return gulp.src('src/*.html') // Переносим HTML в продакшен
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('buildImages', function () {
+    return gulp.src('src/images/**/*') // Переносим изображения в продакшен
+        .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('build', gulp.series('clean', 'sass', gulp.parallel('buildCss','buildFonts','buildJs','buildHtml','buildImages')));
+
+gulp.task('serve', function(done) {
+
+    browserSync.init({
+        server: 'src'
+    });
+
+    gulp.watch(config.paths.scss, gulp.series('sass'));
+    gulp.watch("*.html").on('change', () => {
+        browserSync.reload();
+        done();
+    });
+
+    done();
+});
+
+gulp.task('default', gulp.series('sass', 'serve'));
