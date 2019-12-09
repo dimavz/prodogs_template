@@ -167,10 +167,22 @@
       .info {
         padding: 10px;
 
-        .breed, .sex{
+        .breed{
 
           i {
-            color: $color-red;
+            color: $color-icon-breed;
+            margin-right: 5px;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .label{
+            font-weight: bold;
+          }
+        }
+        .sex{
+
+          i {
+            color: $color-icon-sex;
             margin-right: 5px;
             font-size: 16px;
             font-weight: bold;
@@ -191,7 +203,7 @@
           }
 
           i {
-            color: $color-red;
+            color: $color-icon-event;
             margin-right: 5px;
             font-size: 16px;
           }
@@ -208,7 +220,7 @@
           }
 
           i {
-            color: $color-red;
+            color: $color-icon-map;
             margin-right: 5px;
             font-size: 16px;
           }

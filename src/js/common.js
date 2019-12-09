@@ -118,17 +118,17 @@ $(document).ready(function () {
         }
     });
 
-    //Анимационные эффекты
-    wow = new WOW(
-        {
-            boxClass:     'wow',      // default
-            animateClass: 'animated', // default
-            offset:       0,          // default 0
-            mobile:       false,       // default true
-            live:         true        // default
-        }
-    )
-    wow.init();
+    // //Анимационные эффекты
+    // wow = new WOW(
+    //     {
+    //         boxClass:     'wow',      // default
+    //         animateClass: 'animated', // default
+    //         offset:       0,          // default 0
+    //         mobile:       false,       // default true
+    //         live:         true        // default
+    //     }
+    // )
+    // wow.init();
 
 });
 
