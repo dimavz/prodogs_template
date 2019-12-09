@@ -37,8 +37,6 @@ $color-border-input: $color-base;
 $color-button:$color-border-input;
 $color-border-button:$color-item;
 
-
-
 //Шрифты
 $font-family-base: "Roboto","Arial","Times New Roman", sans-serif;
 $font-roboto-regular:"Roboto Regular";
@@ -49,8 +47,12 @@ $font-weight: normal;
 $font-logo:"BrushScriptMTCursive", "Roboto";
 $font-slogan:"Segoe Print","Roboto";
 
-
 //Междубуквенный интервал
 $letter-spacing-small:0px;
 $letter-spacing-normal:2px;
 $letter-spacing-big:5px;
+
+// Статья
+$color-tag:#a09f9b;
+$color-statistic-icon:#a09f9b;
+$color-statistic-label:#a09f9b;
