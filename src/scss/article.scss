@@ -3,7 +3,7 @@
 @import "partitions/media";
 
 #article {
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
   border: 2px solid $color-base;
   border-radius: 5px;
@@ -56,23 +56,37 @@
 
     .tabs {
 
+      .nav-item{
+        &:hover{
+          background-color: $color-tab-hover;
+          border-radius: .3em;
 
-      .nav-link{
-
-        &.active{
-          color: $color-link-active;
-          background-color: $color-base;
-
-          i{
+          .nav-link{
             color: $color-link-active;
+
+            i{ color:$color-link-active}
           }
         }
-        i{
-          margin-right: 5px;
-          font-size: $font-size-icon;
-          color: $color-base;
+
+        .nav-link{
+
+          &.active{
+            color: $color-link-active;
+            background-color: $color-base;
+
+            i{
+              color: $color-link-active;
+            }
+          }
+          i{
+            margin-right: 5px;
+            font-size: $font-size-icon;
+            color: $color-base;
+          }
         }
       }
+
+
       .tab-content {
         padding: 10px;
         border-left:1px solid $color-tab-grey;
@@ -94,10 +108,10 @@
       margin-right: 5px;
       align-items: center;
       margin-bottom: 5px;
-      border-bottom: 1px dashed $color-base;
+      border-bottom: 1px dashed $color-tag;
 
       i {
-        color: $color-tag;
+        color: darken($color-tag,10%);
         font-size: 18px;
         margin-right: 5px;
       }
@@ -133,7 +147,7 @@
       margin-right: 5px;
       padding-left: 10px;
       padding-bottom: 5px;
-      border-bottom: 1px dashed $color-base;
+      border-bottom: 1px dashed $color-tag;
 
       .views, .comments, .likes, .bookmarks, .createdate, .editdate, .enddate {
         display: flex;

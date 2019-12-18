@@ -107,7 +107,7 @@ gulp.task('serve', function(done) {
     });
 
     gulp.watch(config.paths.scss, gulp.series('sass'));
-    gulp.watch("*.html").on('change', () => {
+    gulp.watch(config.paths.html).on('change', () => {
         browserSync.reload();
         done();
     });

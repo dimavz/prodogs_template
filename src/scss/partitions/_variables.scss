@@ -53,6 +53,7 @@ $letter-spacing-normal:2px;
 $letter-spacing-big:5px;
 
 // Статья
-$color-tag:#a09f9b;
-$color-statistic-icon:#a09f9b;
-$color-statistic-label:#a09f9b;
+$color-tag:lighten($color-base,10%);
+$color-statistic-icon:lighten($color-base,10%);
+$color-statistic-label:lighten($color-base,5%);
+$color-tab-hover:lighten($color-base,10%);
