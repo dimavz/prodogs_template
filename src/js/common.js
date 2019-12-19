@@ -4,10 +4,12 @@ $(document).ready(function () {
     // Вывод формы авторизации пользователя
     $("#key").click(function(){
         $(".key_form").slideToggle(500);
+        $(".search_form").hide();
     });
 
     $("#search").click(function(){
         $(".search_form").slideToggle(500);
+        $(".key_form").hide();
     });
 
     $("#mobile_icon").click(function(){
