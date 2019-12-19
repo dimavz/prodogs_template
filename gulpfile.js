@@ -93,7 +93,7 @@ gulp.task('buildImages', function () {
         .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('build', gulp.series('clean', 'sass', gulp.parallel('buildCss','buildFonts','buildJs','buildHtml','buildImages')));
+gulp.task('build', gulp.series('clean', 'sass', gulp.parallel('buildCss','buildFonts','buildJs','buildLibsJs','buildHtml','buildImages')));
 
 gulp.task('serve', function(done) {
 
