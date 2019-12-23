@@ -148,6 +148,12 @@
 
               &.active {
                   color: $color-link-active;
+                  a{
+                    span{
+                      color: $color-link-active;
+                    }
+
+                  }
                 }
 
               i.fa-home{
@@ -194,14 +200,14 @@
                 margin-left: 5px;
               }
 
-
-
               &:hover{
-
                 color: $color-link-active;
                 .dropdown{
                   visibility: visible;
                 }
+              }
+              &:hover span{
+                color: $color-link-active;
               }
             }
 
@@ -241,8 +247,6 @@
                 &:last-child{
                   border-bottom: none;
                 }
-
-
               }
             }
 
