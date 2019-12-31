@@ -1,29 +1,47 @@
 $(document).ready(function () {
-
-
     // Вывод формы авторизации пользователя
-    $("#key").click(function(){
+    $("#key").click(function () {
         $(".key_form").slideToggle(500);
         $(".search_form").hide();
     });
 
-    $("#search").click(function(){
+    $("#search").click(function () {
         $(".search_form").slideToggle(500);
         $(".key_form").hide();
     });
 
-    $("#mobile_icon").click(function(){
+    $("#mobile_icon").click(function () {
         $(".mobile_items").slideToggle(500);
+    });
+// Закрытие форм поиска и авторизации при клике не по ним
+    $("body").click(function (e) {
+        let el = e.target;
+        // console.log(el);
+        let key_form = closest(el, '.key_form');
+        let key = closest(el, '#key');
+        let search_form = closest(el, '.search_form');
+        let search = closest(el, '#search');
+
+        if(!key){
+            if(!key_form){
+                $('.key_form').css('display','none');
+            }
+        }
+        if(!search){
+            if(!search_form){
+                $('.search_form').css('display','none');
+            }
+        }
     });
 
     //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
         // nav:true, // Показ элементов навигации
-        dots:true, // Показывать элементы навигации в виде точек
-        margin:50, // Отступ между item`ами
+        dots: true, // Показывать элементы навигации в виде точек
+        margin: 50, // Отступ между item`ами
         stagePadding: 40,
-        autoHeight:true, //авто высота элемента
+        autoHeight: true, //авто высота элемента
         loop: true, // Бесконечная прокрутка
         autoplay: true, // Автоматическое проигрывание
         autoplayTimeout: 2000, //Время задержки автоматической прокрутки
@@ -32,7 +50,7 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            480:{
+            480: {
                 items: 1
             },
             600: {
@@ -96,10 +114,10 @@ $(document).ready(function () {
 
 
     //Прокрутка вверх при клике на кнопку
-    $('.flowing-scroll').on( 'click', function(){
+    $('.flowing-scroll').on('click', function () {
         var el = $(this);
         var dest = el.attr('href'); // получаем направление
-        if(dest !== undefined && dest !== '') { // проверяем существование
+        if (dest !== undefined && dest !== '') { // проверяем существование
             $('html').animate({
                     scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
                 }, 500 // скорость прокрутки
@@ -111,7 +129,7 @@ $(document).ready(function () {
 // Скрытие-Отображение кнопки прокрутки Вверх
     $(window).scroll(function (event) {
         var top = $(window).scrollTop();
-        if(top >= 50){
+        if (top >= 50) {
             //show btn
             $("#top_up").css("display", "block");
         } else {
@@ -119,6 +137,13 @@ $(document).ready(function () {
             $("#top_up").css("display", "none");
         }
     });
+
+    // Скрытие окон авторизации и поиска при клике в другом месте
+    document.addEventListener('click', function (e) {
+        var elem = e.target;
+        closeForm(elem);
+    });
+
 
     // //Анимационные эффекты
     // wow = new WOW(
@@ -133,5 +158,20 @@ $(document).ready(function () {
     // wow.init();
 
 });
+
+function closest(el, selector) {
+    if (Element.prototype.closest) {
+        return el.closest(selector);
+    }
+    let parent = el;
+    while (parent) {
+        if (parent.matches(selector)) {
+            return parent;
+        }
+
+        parent = parent.parentElement;
+    }
+    return null;
+}
 
 
