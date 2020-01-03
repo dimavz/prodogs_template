@@ -138,13 +138,6 @@ $(document).ready(function () {
         }
     });
 
-    // Скрытие окон авторизации и поиска при клике в другом месте
-    document.addEventListener('click', function (e) {
-        var elem = e.target;
-        closeForm(elem);
-    });
-
-
     // //Анимационные эффекты
     // wow = new WOW(
     //     {
