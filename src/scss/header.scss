@@ -695,7 +695,7 @@
       }
 
       .banner_468x60{
-        padding: 10px;
+        //padding: 10px;
         width: 468px;
         height: 60px;
         border: 1px solid $color-base;
@@ -704,11 +704,16 @@
         @include devices-max-width-480px{
           display: none;
         }
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .banner_300x250{
         display: none;
-        padding: 10px;
+        //padding: 10px;
         width: 300px;
         height: 250px;
         border: 1px solid $color-base;
@@ -716,6 +721,10 @@
 
         @include devices-max-width-480px{
           display: block;
+        }
+        img{
+          width: 100%;
+          height: 100%;
         }
       }
     }
