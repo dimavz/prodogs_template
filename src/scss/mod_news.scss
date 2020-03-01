@@ -22,23 +22,27 @@
     width: 100%;
     //border: 1px solid grey;
     position: relative;
+    overflow: hidden;
 
     @include devices-max-width-480px {
       margin-bottom: 40px;
     }
-
     &:hover {
       img {
-        opacity: 1;
+        transform: scale(1.1);
       }
     }
 
-    img {
-      //width: 528px;
-      //height: 330px;
+    .image_wrap{
       width: 100%;
-      height: 100%;
-      opacity: .95;
+      //height: 330px;
+      overflow: hidden;
+      img {
+        //width: 528px;
+        width: 100%;
+        //height: 100%;
+        transition: 1s;
+      }
     }
 
     .title_wrap {
@@ -48,6 +52,7 @@
       display: flex;
       justify-content: flex-start;
       color: $color-item;
+      z-index: 100;
 
       @include devices-max-width-480px {
         flex-direction: column;
@@ -86,6 +91,7 @@
             margin-right: 5px;
           }
         }
+
         .month {
           z-index: 101;
           height: 20px;
@@ -99,6 +105,7 @@
             margin-right: 5px;
           }
         }
+
         .year {
           z-index: 101;
           color: $color-link-active;
@@ -134,10 +141,12 @@
           display: block;
           width: 100%;
           height: 100%;
+
           &:hover {
             color: $color-link-active;
             text-decoration: none;
           }
+
           h3 {
             width: 100%;
             height: 100%;
@@ -197,43 +206,48 @@
       overflow: hidden;
       border-bottom: 3px solid $color-grey-light;
       margin-bottom: 20px;
+      overflow: hidden;
 
       &:hover {
         border-bottom: 3px solid $color-base;
-
         img {
           width: 100%;
-          opacity: 1;
+          transform: scale(1.1);
         }
       }
 
-      img {
+      .wrap_new_img{
         width: 100%;
-        height: 180px;
-        opacity: .9;
+        overflow: hidden;
 
-       @include devices-min-width-320px{
-         height: 180px;
-       }
-
-        @include devices-min-width-480px{
-          height: 268px;
-        }
-
-        @media only screen and (min-width: 600px) {
+        img {
+          width: 100%;
           height: 180px;
-        }
+          transition: 1s;
 
-        @include devices-min-width-768px{
-          height: 240px;
-        }
+          @include devices-min-width-320px {
+            height: 180px;
+          }
 
-        @media only screen and (min-width: 800px) {
-          height: 240px;
-        }
+          @include devices-min-width-480px {
+            height: 268px;
+          }
 
-        @include devices-min-width-992px{
-          height: 180px;
+          @media only screen and (min-width: 600px) {
+            height: 180px;
+          }
+
+          @include devices-min-width-768px {
+            height: 240px;
+          }
+
+          @media only screen and (min-width: 800px) {
+            height: 240px;
+          }
+
+          @include devices-min-width-992px {
+            height: 180px;
+          }
         }
       }
 
@@ -242,14 +256,17 @@
         padding: 5px;
         text-transform: lowercase;
       }
+
       .title_new {
         padding: 5px;
+
         h3 {
           font-size: 16px;
           font-family: RobotoRegular;
 
           a {
             color: $color-grey;
+
             &:hover {
               color: $color-base;
             }
@@ -275,6 +292,7 @@
         margin-right: 20px;
         //height: 20px;
       }
+
       h3 {
         @include clear;
         font-size: 14px;
