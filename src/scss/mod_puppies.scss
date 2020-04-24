@@ -31,93 +31,6 @@
 
   }
 
-  .filters {
-    padding: 5px;
-    min-height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: $color-base;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    form {
-      min-height: 40px;
-      margin-left: 5px;
-
-      .form-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .form-group {
-          @include clear;
-          padding: 5px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .select {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-            min-width: 180px;
-            border-radius: .3em;
-
-            select {
-              width: 100%;
-              appearance: none;
-              background-color: $color-background-base;
-              border: 2px solid lighten($color-base, 15);
-              border-radius: .3em;
-
-              @include devices-max-width-992px {
-                font-size: 16px;
-              }
-
-            }
-            i {
-              position: absolute;
-              right: 10px;
-              color: $color-base;
-              //z-index: 100;
-            }
-
-          }
-
-        }
-
-        button {
-          width: 100%;
-
-          @include devices-max-width-600px {
-            width: 50%;
-          }
-          min-height: 40px;
-          //margin: 5px;
-          background-color: $color-base;
-          border: 2px solid $color-background-base;
-          border-radius: .3em;
-          align-self: center;
-
-          i, span {
-            color: $color-background-base;
-            font-size: 18px;
-          }
-
-          span {
-            text-transform: uppercase;
-          }
-
-        }
-
-      }
-    }
-
-  }
-
   .block_cards {
 
     .wrap_card {
@@ -341,36 +254,6 @@
       }
     }
 
-  }
-
-  .mod_links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    .all_post, .add_post {
-      padding: 5px;
-
-      a {
-        color: $color-grey;
-        font-size: 14px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-
-        &:hover {
-          color: $color-base;
-        }
-
-        i {
-          font-size: 18px;
-          margin-right: 5px;
-        }
-      }
-    }
   }
 
 }

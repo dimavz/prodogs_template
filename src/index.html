@@ -278,11 +278,11 @@
                     <div class="baner_wraper">
                         <div class="banner_468x60">
                             <img src="images/banners/banner-468x60.png" alt="">
-<!--                            Банер 468x60-->
+                            <!--                            Банер 468x60-->
                         </div>
                         <div class="banner_300x250">
                             <img src="images/banners/banner-468x60.png" alt="">
-<!--                            Банер 300x250-->
+                            <!--                            Банер 300x250-->
                         </div>
                     </div>
                 </div>
@@ -651,82 +651,787 @@
                         </div>
                     </div>
                 </div>
-                <div class="filters">
-                    <form action="/">
-                        <div class="form-row">
-                            <div class="form-group col-xl-2 col-md-4 col-sm-6">
-                                <div class="select">
-                                    <select id="puppy_breed" class="form-control">
-                                        <option selected>Порода</option>
-                                        <option>Австралийская овчарка</option>
-                                        <option>Сибирский хаски</option>
-                                    </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
-                                </div>
-                            </div>
-                            <div class="form-group col-xl-2 col-md-4 col-sm-6">
-                                <div class="select">
-                                    <select id="puppy_sex" class="form-control">
-                                        <option selected>Пол</option>
-                                        <option>Мужской</option>
-                                        <option>Женский</option>
-                                    </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
-                                </div>
-                            </div>
-                            <div class="form-group col-xl-2 col-md-4 col-sm-6">
-                                <div class="select">
-                                    <select id="birthday" class="form-control">
-                                        <option selected>Дата рождения</option>
-                                        <option>Календарь</option>
-                                    </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
-                                </div>
-                            </div>
-                            <div class="form-group col-xl-2 col-md-4 col-sm-6">
-                                <div class="select">
-                                    <select id="puppy_map" class="form-control">
-                                        <option selected>Местоположение</option>
-                                        <option>Карта</option>
-                                    </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
-                                </div>
-                            </div>
-                            <div class="form-group col-xl-2 col-md-4 col-sm-6">
-                                <div class="select">
-                                    <select id="price" class="form-control">
-                                        <option selected>Цена</option>
-                                        <option>500 руб.</option>
-                                    </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
-                                </div>
+            </div>
+            <div class="mod_filters">
+                <form action="/index.php?option=com_cobalt&amp;view=records&amp;section_id=9:obyavleniya&amp;Itemid=101"
+                      method="post" name="filterform" id="filter-form">
 
-                            </div>
-                            <div class="form-group col-xl-2 col-md-4 col-sm-6">
-                                <button type="submit">
-                                    <i class="fa fa-filter" aria-hidden="true"></i>
-                                    <span>Выбрать</span>
-                                </button>
-                            </div>
+                    <div class="labels-block">
+                        <div data-toggle="collapse" data-target="#filter-k163658c398dd7ae078cc7fc1c918008c"
+                             class="filter-label collapsed">
+                            <span class="filter-icon">
+                                <img src="/images/content/mod_filters/money-coin.png" align="absmiddle">
+                            </span>
+                            Стоимость
                         </div>
 
-                    </form>
-                </div>
-                <div class="mod_links">
-                    <div class="add_post">
-                        <a href="">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                            <span>Добавить объявление</span>
-                        </a>
+                        <div data-toggle="collapse" data-target="#filter-k3beec8665d494c573f641207652e60f7"
+                             class="filter-label collapsed">
+                            <span class="filter-icon"> <img src="/images/content/mod_filters/animal-dog.png"
+                                                            align="absmiddle"> </span>
+                            Порода
+                        </div>
+
+                        <div data-toggle="collapse" data-target="#filter-k35254eb6ed0765c77cf058f867d8172c"
+                             class="filter-label collapsed">
+                            <span class="filter-icon"> <img src="/images/content/mod_filters/sex.png" align="absmiddle"> </span>
+                            Пол
+                        </div>
+
+                        <div data-toggle="collapse" data-target="#filter-kf194989ed1a30256c8ee4ea83e1bfc60"
+                             class="filter-label collapsed">
+                            <span class="filter-icon"> <img src="/images/content/mod_filters/birth.png"
+                                                            align="absmiddle"> </span>
+                            Дата рождения
+                        </div>
+
+                        <div data-toggle="collapse" data-target="#filter-k043ed5b16d476fbc14dee5d97ad8fe4e"
+                             class="filter-label collapsed">
+                            <span class="filter-icon"> <img src="/images/content/mod_filters/marker.png"
+                                                            align="absmiddle"> </span>
+                            Место нахождения
+                        </div>
+
+                        <button type="submit"><i class="fa fa-filter" aria-hidden="true"></i>Применить</button>
+
+
                     </div>
-                    <div class="all_post">
-                        <a href="">
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Смотреть все объявления</span>
-                        </a>
+                    <div class="filters-block">
+                        <div id="filter-k163658c398dd7ae078cc7fc1c918008c" class=" collapse">
+
+                            <div style="margin: 20px;">
+                                <div id="digitsliderk163658c398dd7ae078cc7fc1c918008c"
+                                     class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                    <div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div>
+                                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#"
+                                       style="left: 0%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all"
+                                                                href="#" style="left: 100%;"></a></div>
+                            </div>
+
+                            <div style="margin: 20px;">
+                                <div class="pull-left form-inline">
+                                    <label class="">Min </label>
+
+                                    <div class=" input-prepend">
+                                        <span class="add-on">$</span>
+
+                                        <input autocomplete="off" type="text" style="width:100px"
+                                               name="filters[k163658c398dd7ae078cc7fc1c918008c][min]"
+                                               id="input_minmax_min319" value="250">
+
+                                    </div>
+                                </div>
+
+                                <div class="pull-right form-inline">
+                                    <label class="">Max</label>
+
+                                    <div class=" input-prepend">
+                                        <span class="add-on">$</span>
+
+                                        <input autocomplete="off" type="text" style="width:100px"
+                                               name="filters[k163658c398dd7ae078cc7fc1c918008c][max]"
+                                               id="input_minmax_max319" value="355">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <br>
+                            <div class="alert alert-error" id="erralert319" style="display: none;"></div>
+
+                            <script>
+                                (function ($) {
+                                    var sldr = $("#digitsliderk163658c398dd7ae078cc7fc1c918008c");
+                                    var errbox = $('#erralert319');
+
+                                    var min = $('#input_minmax_min319');
+                                    var max = $('#input_minmax_max319');
+
+                                    errbox.hide();
+
+                                    sldr.slider({
+                                        range: true,
+                                        min: 250,
+                                        max: 355,
+                                        step: 1,
+                                        values: [250, 355],
+                                        slide: function (event, ui) {
+                                            min.val(ui.values[0]);
+                                            max.val(ui.values[1]);
+                                        }
+                                    });
+
+                                    min.on('keyup', function () {
+                                        Cobalt.formatFloat(this, 2, 10)
+                                        var val = this.value;
+
+                                        if (parseInt(val) > 0) {
+                                            max.val(sldr.slider('values', 1));
+                                        } else {
+                                            max.val('');
+                                        }
+
+                                        if (parseInt(val) >= 250 && parseInt(val) <= 355) {
+                                            sldr.slider('values', 0, this.value);
+                                        }
+
+                                        if ((parseInt(val) > parseInt(sldr.slider('values', 1))) && (parseInt(sldr.slider('values', 1)) > 0)) {
+                                            errbox.show().html('Минимум больше максимума');
+                                        } else {
+                                            if (parseInt(val) > 355) {
+                                                errbox.show().html('Минимальное введенное значение больше максимального');
+                                            } else {
+                                                errbox.hide();
+                                            }
+                                        }
+                                    });
+                                    max.on('keyup', function () {
+                                        Cobalt.formatFloat(this, 2, 10)
+                                        var val = this.value;
+
+                                        if (parseInt(val) > 0) {
+                                            min.val(sldr.slider('values', 0));
+                                        } else {
+                                            min.val('');
+                                        }
+
+                                        if (parseInt(val) >= 250 && parseInt(val) <= 355) {
+                                            sldr.slider('values', 1, this.value);
+                                        }
+                                        if (parseInt(val) < sldr.slider('values', 0)) {
+                                            errbox.show().html('Максимальное введенное значение меньше минимального');
+                                        } else {
+                                            errbox.hide();
+                                        }
+                                    });
+
+                                }(jQuery));
+                            </script>
+                        </div>
+                        <div id="filter-k3beec8665d494c573f641207652e60f7" class=" collapse">
+
+                            <style>
+                                .list-item {
+                                    margin-bottom: 5px;
+                                }
+                            </style>
+                            <div id="parent_list65"></div>
+                            <a data-toggle="modal" role="button" class="btn btn-small btn-warning" href="#modal65">Выбрать
+                                породу</a>
+
+                            <div style="width:770px;" class="modal hide fade" id="modal65" tabindex="-1" role="dialog">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                    </button>
+                                    <h3 id="myModalLabel">Select Children</h3>
+                                </div>
+
+                                <div class="modal-body" style="overflow-x: hidden; max-height:650px; padding:0;">
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close
+                                    </button>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                (function ($) {
+
+                                    window.modal65 = $('#modal65');
+                                    window.elementslist65 = $('#parent_list65');
+                                    window.multi65 = true;
+                                    window.limit65 = 100;
+                                    window.name65 = 'filters[k3beec8665d494c573f641207652e60f7][]';
+
+                                    $('#modal65').on('show', function () {
+                                        var ids = [];
+                                        $.each(elementslist65.children('div.alert'), function (k, v) {
+                                            ids.push($(v).attr('rel'));
+                                        });
+                                        console.log(ids.join(','));
+                                        var iframe = $(document.createElement("iframe")).attr({
+                                            frameborder: "0",
+                                            width: "100%",
+                                            height: "510px",
+                                            src: '/index.php?option=com_cobalt&view=elements&layout=records&tmpl=component&section_id=2&filter_type=2&mode=form&field_id=65&excludes=' + ids.join(',')
+                                        });
+                                        $(".modal-body").html(iframe);
+                                    });
+
+                                    window.list65 = function (id, title) {
+                                        lis = elementslist65.children('div.alert');
+                                        if (lis.length >= limit65) {
+                                            alert('Вы можете выбрать не более <b>100</b> опций');
+                                            return false;
+                                        }
+                                        error = 0;
+                                        $.each(lis, function (k, v) {
+                                            if ($(v).attr('rel') == id) {
+                                                alert('Уже выбрано');
+                                                error = 1;
+                                            }
+                                        });
+                                        if (error) {
+                                            return false;
+                                        }
+
+                                        var el = $(document.createElement('div')).attr({
+                                            'class': 'alert alert-info list-item',
+                                            rel: id
+                                        }).html('<a class="close" data-dismiss="alert" href="#">x</a><span>' + title + '</span><input type="hidden" name="filters[k3beec8665d494c573f641207652e60f7][]" value="' + id + '">');
+                                        elementslist65.append(el);
+                                        return true;
+                                    }
+
+
+                                    window.updatelist65 = function (list) {
+                                        var elementslist65 = $('#parent_list65');
+                                        elementslist65.empty();
+                                        $.each(list, function () {
+                                            elementslist65.append(this);
+                                        });
+                                    }
+                                }(jQuery));
+                            </script>
+
+                        </div>
+                        <div id="filter-k35254eb6ed0765c77cf058f867d8172c" class=" collapse">
+                            <select id="filtersk35254eb6ed0765c77cf058f867d8172cvalue"
+                                    name="filters[k35254eb6ed0765c77cf058f867d8172c][value]">
+                                <option value="" selected="selected">- Укажите пол -</option>
+                                <option value="девочка">девочка</option>
+                                <option value="мальчик">мальчик</option>
+                            </select>
+                        </div>
+                        <div id="filter-kf194989ed1a30256c8ee4ea83e1bfc60" class=" collapse">
+
+                            <input type="text" class="cdate-field" value="" id="field__module66" size="30"
+                                   data-field-options="{type: '', name: 'filters[kf194989ed1a30256c8ee4ea83e1bfc60][range]', input: 'filter'}">
+                            <input type="hidden" value="" id="filter__module66"
+                                   name="filters[kf194989ed1a30256c8ee4ea83e1bfc60][range]">
+                            <script type="text/javascript">
+                                picker_module66 = new Picker.Date.Range(document.getElementById('field__module66'), {
+                                    timePicker: 0,
+                                    columns: 2,
+                                    positionOffset: {x: 5, y: 0},
+                                    format: 'd F Y',
+                                    onSelect: function (dates, input) {
+                                        var hidden_s = dates.format('%Y-%m-%d');
+                                        var hidden_f = input.format('%Y-%m-%d');
+                                        jQuery('#filter__module66').val(hidden_s + ',' + hidden_f);
+                                        var formatted_s = dates.format_php('d F Y');
+                                        var formatted_f = input.format_php('d F Y');
+                                        jQuery('#field__module66').val(formatted_s + ' - ' + formatted_f);
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div id="filter-k043ed5b16d476fbc14dee5d97ad8fe4e" class=" collapse">
+                            <style>
+                                #map_canvas_74 label {
+                                    width: auto;
+                                    display: inline;
+                                }
+
+                                #map_canvas_74 img {
+                                    max-width: none;
+                                }
+
+                                #locationField {
+                                    display: inline;
+                                    position: absolute;
+                                    z-index: 5;
+                                }
+
+                                #locationField input {
+                                    width: 180px;
+                                }
+
+                                #filtersk043ed5b16d476fbc14dee5d97ad8fe4ecomplete_limit {
+                                    width: 120px;
+                                }
+                            </style>
+                            <div class="form-inline">
+                                <label>Радиус удаления</label>
+                                <input type="text" style="width: 50px"
+                                       name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][radius]"
+                                       onkeyup="setCircleRadius74()" value="20" size="10"
+                                       id="filtersk043ed5b16d476fbc14dee5d97ad8fe4eradius">
+                                <select onchange="setCircleRadius74()" style="width: 60px"
+                                        name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][dist_type]"
+                                        id="filtersk043ed5b16d476fbc14dee5d97ad8fe4edist_type">
+                                    <option value="km" selected="">километры (км)</option>
+                                    <option value="m">метры (м)</option>
+                                </select>
+                                <input type="button" class="btn" value="Назначить" onclick="setCircleRadius74()">
+                                <br>
+                                <div style="margin-top: 15px; position: relative;">
+                                    <div id="locationField">
+                                        <input id="filter_ac" placeholder="Ошибка" type="text"
+                                               class="pac-target-input gm-err-autocomplete" autocomplete="off"
+                                               disabled=""
+                                               style="background-image: url(&quot;http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png&quot;);">
+                                    </div>
+                                    <span style="margin-left: 205px">
+				<select id="filtersk043ed5b16d476fbc14dee5d97ad8fe4ecomplete_limit"
+                        name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][complete_limit]">
+	<option value="0">- Limit Country -</option>
+	<option value="BY">Беларусь</option>
+	<option value="UA">Украина</option>
+</select>
+								<b>OR</b>
+				<button class="btn" type="button" id="cur_loc" onclick="currpos74()">Маркер на текущей позиции</button>
+			</span>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="map_canvas_74"
+                                 style="width: 100%; height: 300px; position: relative; overflow: hidden;">
+                                <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                                    <div class="gm-err-container">
+                                        <div class="gm-err-content">
+                                            <div class="gm-err-icon"><img
+                                                    src="http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png"
+                                                    draggable="false" style="user-select: none;"></div>
+                                            <div class="gm-err-title">Ошибка</div>
+                                            <div class="gm-err-message">При загрузке Google Карт на этой странице
+                                                возникла проблема. Подробности вы найдете в консоли JavaScript.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <small>Переместите маркер, чтобы уточнить его позицию</small>
+                            <input id="f74_position_lat" style="width:100%" type="hidden"
+                                   name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][position][lat]" value=""> <input
+                                id="f74_position_lng" style="width:100%" type="hidden"
+                                name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][position][lng]" value=""> <input
+                                id="f74_position_zoom" style="width:100%" type="hidden"
+                                name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][position][zoom]" value="1">
+                            <input id="f74_bounds_sw_lat" style="width:100%" type="hidden"
+                                   name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][bounds][sw_lat]" value=""> <input
+                                id="f74_bounds_sw_lng" style="width:100%" type="hidden"
+                                name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][bounds][sw_lng]" value=""> <input
+                                id="f74_bounds_ne_lat" style="width:100%" type="hidden"
+                                name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][bounds][ne_lat]" value=""> <input
+                                id="f74_bounds_ne_lng" style="width:100%" type="hidden"
+                                name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][bounds][ne_lng]" value="">
+                            <input id="f74_position_address" style="width:100%" type="hidden"
+                                   name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][position][address]" value="">
+                            <h4>Фильтровать по стране, региону, городу</h4>
+                            <div id="filterk043ed5b16d476fbc14dee5d97ad8fe4e">
+                                <select id="filtersk043ed5b16d476fbc14dee5d97ad8fe4ecountry"
+                                        name="filters[k043ed5b16d476fbc14dee5d97ad8fe4e][country]"
+                                        onchange="getChilds(this.value, 'state')" class="select-geo">
+                                    <option value="0">- Выберите Страну -</option>
+                                    <option value="BY">Беларусь</option>
+                                    <option value="UA">Украина</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+                            <script type="text/javascript">
+                                (function ($) {
+
+                                    var myLatLang = new google.maps.LatLng(42.293564192170095, -33.33983659744263);
+                                    var myZoom = 2;
+
+                                    $.ajax('http://ip-api.com/json/', {
+                                        dataType: "json"
+                                    }).done(function (result) {
+                                        if (!result) {
+                                            return;
+                                        }
+
+                                        if (result.status == 'fail') {
+                                            return;
+                                        }
+
+                                        if (result.lat && result.lon) {
+                                            myLatLang = new google.maps.LatLng(result.lat, result.lon);
+                                        } else if (result.countryCode) {
+                                            var ipad = [];
+                                            if (result.countryCode) {
+                                                ipad.push(result.countryCode.toLowerCase());
+                                            }
+                                            if (result.city) {
+                                                ipad.push(result.city);
+                                            }
+
+                                            geocoder.geocode({'address': ipad.join(', ')}, function (results, status) {
+                                                if (status == google.maps.GeocoderStatus.OK) {
+                                                    myLatLang = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                                                }
+                                            });
+                                        }
+                                    });
+
+                                    myZoom = 7;
+
+                                    var Fgeocoder = new google.maps.Geocoder();
+                                    var Fmap = new google.maps.Map(document.getElementById('map_canvas_74'), {
+                                        'mapTypeId': google.maps.MapTypeId.ROADMAP,
+                                        'panControl': false,
+                                        'scaleControl': false,
+                                        'rotateControl': false,
+                                        'streetViewControl': false,
+                                        'overviewMapControl': false,
+                                        'zoom': myZoom,
+                                        'center': myLatLang
+                                    });
+
+                                    window.filtermap74 = Fmap;
+                                    google.maps.visualRefresh = true;
+
+                                    var msize = new google.maps.Size(20, 34);
+                                    var mpoint = new google.maps.Point(10, 34);
+                                    var markerIcon = new google.maps.MarkerImage('http://prodogs.loc/components/com_cobalt/fields/geo/markers/grouped/other/marker-big-blue.png', msize, new google.maps.Point(0, 0), mpoint);
+
+                                    var Fmarker = new google.maps.Marker({
+                                        'map': Fmap,
+                                        'cursor': 'move',
+                                        'position': myLatLang,
+                                        'draggable': true,
+                                        'icon': markerIcon
+                                    });
+
+
+                                    //Add a Circle overlay to the map.
+                                    var Fcircle = new google.maps.Circle({
+                                        map: Fmap,
+                                        radius: 20000,
+                                        fillColor: '#000000',
+                                        fillOpacity: 0.2,
+                                        strokeColor: '#000000',
+                                        strokeOpacity: 0.5,
+                                        strokeWeight: 1
+                                    });
+                                    Fcircle.bindTo('center', Fmarker, 'position');
+                                    Fmap.fitBounds(Fcircle.getBounds());
+
+                                    if ($('#k043ed5b16d476fbc14dee5d97ad8fe4e').length) {
+                                        $('#k043ed5b16d476fbc14dee5d97ad8fe4e').one('click', function (e) {
+                                            setTimeout(function () {
+                                                google.maps.event.trigger(Fmap, 'resize');
+                                                Fmap.setCenter(Fmarker.getPosition());
+                                                Fmap.fitBounds(Fcircle.getBounds());
+                                                onCountryChange($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4ecomplete_limit').val(), resetMap);
+                                            }, 100);
+                                        });
+                                    }
+
+                                    var autocomplete = new google.maps.places.Autocomplete((document.getElementById('filter_ac')));
+                                    autocomplete.setBounds(new google.maps.LatLngBounds(Fmap.getCenter(), Fmap.getCenter()));
+
+                                    $('#filter_ac').bind('change keydown', function (e) {
+                                        if (e.keyCode == 13) {
+                                            e.preventDefault();
+                                        }
+                                    });
+
+                                    var places = new google.maps.places.PlacesService(Fmap);
+
+                                    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+
+                                    google.maps.event.addListener(Fmap, 'click', function (event) {
+                                        $('#cur_loc').removeAttr('disabled').css('background', '');
+                                        Fmarker.setPosition(event.latLng);
+                                        setHiddenPosition(event.latLng);
+                                        setCircleRadius74();
+                                    });
+
+                                    google.maps.event.addListener(Fmap, 'zoom_changed', function (event) {
+                                        $('#f74_position_zoom').val(Fmap.getZoom());
+                                    });
+
+                                    google.maps.event.addListener(Fmarker, 'dragend', function (event) {
+                                        $('#cur_loc').removeAttr('disabled').css('background', '');
+                                        setHiddenPosition(event.latLng);
+                                        setCircleRadius74();
+                                    });
+
+                                    $('#filtersk043ed5b16d476fbc14dee5d97ad8fe4ecomplete_limit').bind('change keyup', function (e) {
+                                        onCountryChange($(this).val());
+                                    });
+
+                                    onCountryChange($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4ecomplete_limit').val(), resetMap);
+
+                                    function onCountryChange(country, next) {
+
+                                        autocomplete.setBounds(Fmap.getBounds());
+
+                                        if (typeof country == 'undefined') {
+                                            return;
+                                        }
+
+                                        if (country.length == 2) {
+                                            Fgeocoder.geocode({'address': 'country ' + country}, function (results, status) {
+                                                if (status == google.maps.GeocoderStatus.OK) {
+                                                    Fmarker.setPosition(results[0].geometry.location);
+                                                    setHiddenPosition(results[0].geometry.location);
+                                                    //setCircleRadius74();
+
+                                                    Fmap.fitBounds(results[0].geometry.bounds);
+                                                    autocomplete.setBounds(results[0].geometry.bounds);
+
+                                                    if ($.isFunction(next)) {
+                                                        next();
+                                                    }
+                                                }
+                                            });
+
+                                            autocomplete.setComponentRestrictions({'country': country.toLowerCase()});
+                                        } else {
+                                            //autocomplete.setComponentRestrictions({'country': ''});
+                                        }
+                                    }
+
+                                    function onPlaceChanged() {
+                                        var place = autocomplete.getPlace();
+                                        if (place.geometry) {
+                                            Fmarker.setPosition(place.geometry.location);
+                                            setHiddenPosition(place.geometry.location);
+                                            setCircleRadius74();
+                                        } else {
+                                            document.getElementById('autocomplete').placeholder = 'Enter a city';
+                                        }
+                                    }
+
+                                    $('#autocomplete').keypress(function (e) {
+                                        if (e.which == 13) {
+                                            return false;
+                                        }
+                                    });
+
+
+                                    window.setCircleRadius74 = function () {
+                                        Fmarker.setVisible(true);
+                                        Fcircle.setVisible(true);
+
+                                        var value = parseInt($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4eradius').val());
+
+                                        if (!value) return;
+
+                                        if ($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4edist_type').val() == 'km') {
+                                            value = value * 1000;
+                                        }
+
+                                        Fcircle.setOptions({
+                                            fillColor: '#000000',
+                                            fillOpacity: 0.3,
+                                            strokeColor: '#000000',
+                                            strokeOpacity: 0.8,
+                                            strokeWeight: 2
+                                        });
+                                        Fcircle.setRadius(value);
+                                        var bounds = Fcircle.getBounds();
+                                        Fmap.fitBounds(bounds);
+
+                                        $('#f74_bounds_sw_lng').val(bounds.getSouthWest().lng());
+                                        $('#f74_bounds_sw_lat').val(bounds.getSouthWest().lat());
+                                        $('#f74_bounds_ne_lng').val(bounds.getNorthEast().lng());
+                                        $('#f74_bounds_ne_lat').val(bounds.getNorthEast().lat());
+
+
+                                        Fgeocoder.geocode({'latLng': Fmap.getCenter()}, function (results, status) {
+                                            if (status == google.maps.GeocoderStatus.OK) {
+                                                $('#f74_position_address').val(
+                                                    $('#filtersk043ed5b16d476fbc14dee5d97ad8fe4edist_type').val() == 'm' ? results[0].formatted_address : results[0].formatted_address
+                                                );
+                                            }
+                                        });
+
+                                        //autocomplete.setBounds(Fmap.getBounds());
+
+                                        resetMarker();
+                                        resetCountry();
+                                    }
+
+                                    function setHiddenPosition(latlong) {
+                                        $('#f74_position_lat').val(latlong.lat());
+                                        $('#f74_position_lng').val(latlong.lng());
+                                        $('#f74_position_zoom').val(Fmap.getZoom());
+                                    }
+
+                                    window.currpos74 = function () {
+                                        $('#cur_loc').attr('disabled', 'disabled').css('background', 'url("/media/mint/js/mooupload/imgs/load_bg_blue.gif")');
+                                        Fgl.getCurrentPosition(displayPosition, displayError);
+                                    }
+
+                                    function displayPosition(position) {
+                                        latlong = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                                        Fmarker.setPosition(latlong);
+                                        Fmap.panTo(latlong);
+                                        Fmap.setCenter(latlong);
+                                        //Fmap.setZoom(15);
+                                        setHiddenPosition(latlong);
+                                        $('#cur_loc').removeAttr('disabled').css('background', '');
+                                        setCircleRadius74();
+                                    }
+
+                                    function displayError(positionError) {
+                                        alert('Browser not supported');
+                                        $('#cur_loc').removeAttr('disabled').css('background', '');
+                                        $('#cur_loc').css('display', 'none');
+                                    }
+
+                                    var Fgl;
+
+                                    try {
+                                        Fgl = navigator.geolocation;
+                                    } catch (e) {
+                                    }
+
+                                    if (!Fgl) {
+                                        $('#cur_loc').css('display', 'none');
+                                    }
+
+                                    // ------------- address filter -------------------
+                                    window.getChilds = function (val, child) {
+                                        var fid = 'k043ed5b16d476fbc14dee5d97ad8fe4e';
+
+                                        resetMap();
+                                        resetMarker();
+
+                                        if (!child) return;
+
+                                        if ($('#' + child + fid) && val == 0) {
+                                            $(child + fid).remove();
+                                            return;
+                                        }
+
+                                        if (child == 'state' && $('#city' + fid) && $('#filters' + fid + 'country').val() == 0) {
+                                            $('#city' + fid).remove();
+                                            return;
+                                        }
+
+                                        $.ajax({
+                                            url: '/index.php?option=com_cobalt&task=ajax.field_call&tmpl=component&Itemid=101',
+                                            dataType: 'json',
+                                            type: 'POST',
+                                            data: {
+                                                field_id: 74,
+                                                func: '_getChilds',
+                                                value: val,
+                                                country: ($('#filters' + fid + 'country') == undefined ? 0 : $('#filters' + fid + 'country').val()),
+                                                index: child,
+                                                section_id: 9,
+                                                ajax: true
+                                            },
+                                        }).done(function (json) {
+                                            if (json == undefined) {
+                                                return;
+                                            }
+
+                                            if (!json.success) {
+                                                alert(json.error);
+                                                return;
+                                            }
+                                            if ($('#' + child + fid))
+                                                $('#' + child + fid).remove();
+                                            if (child == 'state' && $('#city' + fid))
+                                                $('#city' + fid).remove();
+                                            var sp = $(document.createElement('span')).attr({id: child + fid});
+                                            sp.html(json.result);
+                                            $('#filter' + fid).append(sp);
+                                            $('.select-geo').chosen({
+                                                disable_search_threshold: 10,
+                                                allow_single_deselect: true
+                                            });
+                                        });
+                                    };
+
+
+                                    window.filterMarker74 = function (el, file) {
+                                        $('img.active').removeClass('active');
+                                        $(el).addClass('active');
+                                        $('#f74_marker_name').val(file);
+                                        resetMap();
+                                        resetCountry();
+                                    }
+
+                                    function resetMarker() {
+                                        if ($('#f74_marker_name')) {
+                                            $('#f74_marker_name').val('');
+                                            $('#img.active').removeClass('active');
+                                        }
+                                    }
+
+                                    function resetMap() {
+                                        if ($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4eradius')) {
+                                            $('#f74_bounds_sw_lng').val('');
+                                            $('#f74_bounds_sw_lat').val('');
+                                            $('#f74_bounds_ne_lng').val('');
+                                            $('#f74_bounds_ne_lat').val('');
+                                        }
+
+                                        if (typeof Fcircle != 'undefined') {
+                                            Fcircle.setOptions({
+                                                fillColor: '#000000',
+                                                fillOpacity: 0.2,
+                                                strokeColor: '#000000',
+                                                strokeOpacity: 0.5,
+                                                strokeWeight: 1,
+                                                center: myLatLang
+                                            });
+                                        }
+
+                                        if (Fmap) {
+                                            Fmap.fitBounds(Fcircle.getBounds());
+                                        }
+                                    }
+
+                                    function resetCountry() {
+
+                                        if ($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4ecountry')) {
+                                            $('#filtersk043ed5b16d476fbc14dee5d97ad8fe4ecountry').val(0);
+                                            if ($('#statek043ed5b16d476fbc14dee5d97ad8fe4e')) {
+                                                $('#statek043ed5b16d476fbc14dee5d97ad8fe4e').remove();
+                                            }
+                                            if ($('#cityk043ed5b16d476fbc14dee5d97ad8fe4e')) {
+                                                $('#cityk043ed5b16d476fbc14dee5d97ad8fe4e').remove();
+                                            }
+                                        }
+                                        if ($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4estate')) {
+                                            $('#filtersk043ed5b16d476fbc14dee5d97ad8fe4estate').val(0);
+                                            if ($('#cityk043ed5b16d476fbc14dee5d97ad8fe4e')) {
+                                                $('#cityk043ed5b16d476fbc14dee5d97ad8fe4e').remove();
+                                            }
+                                        }
+                                        if ($('#filtersk043ed5b16d476fbc14dee5d97ad8fe4ecity')) {
+                                            $('#cityk043ed5b16d476fbc14dee5d97ad8fe4e').val(0);
+                                        }
+                                    }
+                                }(jQuery));
+                            </script>
+                        </div>
                     </div>
 
+                    <input type="hidden" name="option" value="com_cobalt">
+                    <input type="hidden" name="view" value="records">
+                    <input type="hidden" name="section_id" value="9">
+                    <input type="hidden" name="cat_id" value="8">
+                    <input type="hidden" name="Itemid" value="131">
+                    <input type="hidden" name="task" value="records.filters">
+                    <input type="hidden" name="limitstart" value="0">
+                </form>
+            </div>
+            <div class="mod_links">
+                <div class="add_post">
+                    <a href="">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <span>Добавить объявление</span>
+                    </a>
                 </div>
+                <div class="all_post">
+                    <a href="">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span>Смотреть все объявления</span>
+                    </a>
+                </div>
+
             </div>
             <div id="mod_search_dog" class="mod_search_dog">
                 <div class="mod_title">
@@ -950,7 +1655,7 @@
                                         <option selected>Место пропажи</option>
                                         <option>Карта</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -959,7 +1664,7 @@
                                         <option selected>Дата пропажи</option>
                                         <option>Календарь</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -969,7 +1674,7 @@
                                         <option>Австралийская овчарка</option>
                                         <option>Сибирский хаски</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -979,7 +1684,7 @@
                                         <option>Мужской</option>
                                         <option>Женский</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -1217,7 +1922,7 @@
                                         <option selected>Место положение</option>
                                         <option>Карта</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -1227,7 +1932,7 @@
                                         <option>Австралийская овчарка</option>
                                         <option>Сибирский хаски</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -1237,7 +1942,7 @@
                                         <option>Мужской</option>
                                         <option>Женский</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-6">
@@ -1502,7 +2207,7 @@
                                         <option selected>Период проведения</option>
                                         <option>Календарь</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-md-4 col-sm-6">
@@ -1511,7 +2216,7 @@
                                         <option selected>Место проведения</option>
                                         <option>Карта</option>
                                     </select>
-<!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
+                                    <!--                                    <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>-->
                                 </div>
                             </div>
                             <div class="form-group col-xl-2 col-md-4 col-sm-6">
@@ -1545,62 +2250,64 @@
                     <h2>Новые статьи</h2>
                 </div>
                 <div class="block_articles">
-                            <div class="article">
-                                <a class="img" href="#">
-                                    <img src="images/content/mod_new_articles/image1.jpg" alt="">
-                                </a>
-                                <div class="data">
-                                    24 января 2019
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        Отправляясь в поход с вашим питомцем учтите эти особенности...
-                                    </a>
+                    <div class="article">
+                        <a class="img" href="#">
+                            <img src="images/content/mod_new_articles/image1.jpg" alt="">
+                        </a>
+                        <div class="data">
+                            24 января 2019
+                        </div>
+                        <div class="title">
+                            <a href="#">
+                                Отправляясь в поход с вашим питомцем учтите эти особенности...
+                            </a>
 
-                                </div>
-                            </div><!--end /.article-->
-                            <div class="article">
-                                <a class="img" href="#">
-                                    <img src="images/content/mod_new_articles/image1.jpg" alt="">
-                                </a>
-                                <div class="data">
-                                    24 января 2019
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet animi aspernatur aut cupiditate debitis distinctio, exercitationem incidunt itaque minima, nihil nostrum odit officia, possimus qui veritatis voluptatem. Esse, maxime.
-                                    </a>
+                        </div>
+                    </div><!--end /.article-->
+                    <div class="article">
+                        <a class="img" href="#">
+                            <img src="images/content/mod_new_articles/image1.jpg" alt="">
+                        </a>
+                        <div class="data">
+                            24 января 2019
+                        </div>
+                        <div class="title">
+                            <a href="#">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet animi aspernatur
+                                aut cupiditate debitis distinctio, exercitationem incidunt itaque minima, nihil nostrum
+                                odit officia, possimus qui veritatis voluptatem. Esse, maxime.
+                            </a>
 
-                                </div>
-                            </div><!--end /.article-->
-                            <div class="article">
-                                <a class="img" href="#">
-                                    <img src="images/content/mod_new_articles/image1.jpg" alt="">
-                                </a>
-                                <div class="data">
-                                    24 января 2019
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        Отправляясь в поход с вашим питомцем учтите эти особенности...
-                                    </a>
+                        </div>
+                    </div><!--end /.article-->
+                    <div class="article">
+                        <a class="img" href="#">
+                            <img src="images/content/mod_new_articles/image1.jpg" alt="">
+                        </a>
+                        <div class="data">
+                            24 января 2019
+                        </div>
+                        <div class="title">
+                            <a href="#">
+                                Отправляясь в поход с вашим питомцем учтите эти особенности...
+                            </a>
 
-                                </div>
-                            </div><!--end /.article-->
-                            <div class="article">
-                                <a class="img" href="#">
-                                    <img src="images/content/mod_new_articles/image1.jpg" alt="">
-                                </a>
-                                <div class="data">
-                                    24 января 2019
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        Отправляясь в поход с вашим питомцем учтите эти особенности...
-                                    </a>
+                        </div>
+                    </div><!--end /.article-->
+                    <div class="article">
+                        <a class="img" href="#">
+                            <img src="images/content/mod_new_articles/image1.jpg" alt="">
+                        </a>
+                        <div class="data">
+                            24 января 2019
+                        </div>
+                        <div class="title">
+                            <a href="#">
+                                Отправляясь в поход с вашим питомцем учтите эти особенности...
+                            </a>
 
-                                </div>
-                            </div><!--end /.article-->
+                        </div>
+                    </div><!--end /.article-->
                 </div><!--end /.block_articles-->
                 <div class="all_articles">
                     <a href="">
@@ -1638,17 +2345,23 @@
                 <div class="left_block">
                     <h2>Заголовок левого блока</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate debitis deleniti doloribus ex fugit hic in incidunt maiores nam nobis, non nostrum omnis possimus, quisquam rem, sequi veritatis voluptate?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate debitis deleniti
+                        doloribus ex fugit hic in incidunt maiores nam nobis, non nostrum omnis possimus, quisquam rem,
+                        sequi veritatis voluptate?
                     </p>
 
                 </div><!--end /.left_block-->
                 <div class="center_block">
                     <h2>Заголовок центрального блока</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi enim laborum, non nulla optio pariatur praesentium quas tempora veniam voluptate! Consequatur doloremque, est harum hic ipsa perferendis quos ratione vitae?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi enim laborum, non nulla optio
+                        pariatur praesentium quas tempora veniam voluptate! Consequatur doloremque, est harum hic ipsa
+                        perferendis quos ratione vitae?</p>
                 </div><!-- end /.center_block-->
                 <div class="right_block">
                     <h2>Заголовок правого блока</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci commodi deleniti dicta eligendi expedita nesciunt nobis, odit, perspiciatis provident quaerat vitae. Illo labore natus, nihil omnis quod tenetur ullam.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci commodi deleniti dicta
+                    eligendi expedita nesciunt nobis, odit, perspiciatis provident quaerat vitae. Illo labore natus,
+                    nihil omnis quod tenetur ullam.
                 </div><!-- /.right_block-->
             </div><!-- /.wrap_footer-->
         </div><!--end /.container-->

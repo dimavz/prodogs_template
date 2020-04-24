@@ -1,0 +1,62 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+.mod_filters {
+  padding: 5px;
+  min-height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $color-base;
+  border-bottom: 1px solid $color-grey-light;
+
+  form {
+    width: 100%;
+
+    .labels-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .filter-label {
+        min-width: 100px;
+        border-radius: .3em;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        border: 1px solid $color-icon-breed;
+        background-color: $color-background-base;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: transparent;
+        color: $color-background-base;
+        border-radius: .3em;
+        border: 1px solid $color-background-base;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        i {
+          color: $color-background-base;
+          margin-right: 5px;
+          margin: 7px;
+        }
+      }
+    }
+
+    .filters-block {
+      margin-top: 5px;
+
+      .collapse {
+        padding: 15px 5px 15px 35px;
+        background-color: $color-grey-light;
+        border-bottom: 1px solid $color-base;
+      }
+    }
+  }
+}

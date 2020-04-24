@@ -1,0 +1,33 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+.mod_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .all_post, .add_post {
+    padding: 5px;
+
+    a {
+      color: $color-grey;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $color-base;
+      }
+
+      i {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
