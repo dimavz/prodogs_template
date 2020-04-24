@@ -15,6 +15,7 @@
 
   form {
     width: 100%;
+    margin: 0px;
 
     .labels-block {
       display: flex;
@@ -51,10 +52,10 @@
     }
 
     .filters-block {
-      margin-top: 5px;
 
       .collapse {
         padding: 15px 5px 15px 35px;
+        margin-top: 5px;
         background-color: $color-grey-light;
         border-bottom: 1px solid $color-base;
       }
