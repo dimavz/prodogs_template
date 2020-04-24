@@ -643,6 +643,14 @@
       text-shadow: $color-base 1px 1px 0, $color-base -1px -1px 0,
       $color-base -1px 1px 0, $color-base 1px -1px 0;
 
+      a{
+        color: $color-item;
+        text-decoration: none;
+        &:hover{
+          color: $color-link-active;
+        }
+      }
+
       @include devices-max-width-1200px{
         font-size: 50px;
       }
