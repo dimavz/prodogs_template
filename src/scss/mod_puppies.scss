@@ -238,10 +238,18 @@
             }
           }
 
-          .text {
+          .tabs {
             margin: 10px;
             height: 200px;
             overflow: hidden;
+
+            .nav.nav-tabs{
+              justify-content: space-around;
+              padding: 5px;
+            }
+            .tab-content{
+              margin-top: 5px;
+            }
           }
 
           .link_more {
