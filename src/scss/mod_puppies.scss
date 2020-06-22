@@ -240,15 +240,15 @@
 
           .tabs {
             margin: 10px;
-            height: 200px;
-            overflow: hidden;
+            //height: 195px;
+            //overflow: hidden;
 
-            .nav.nav-tabs{
-              justify-content: space-around;
-              padding: 5px;
-            }
             .tab-content{
-              margin-top: 5px;
+              padding: 10px;
+              border: 1px solid $color-grey-light;
+              border-top: none;
+              height: 155px;
+              overflow: hidden;
             }
           }
 
