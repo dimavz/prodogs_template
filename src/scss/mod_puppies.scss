@@ -32,6 +32,7 @@
   }
 
   .block_cards {
+    margin-bottom: 5px;
 
     .wrap_card {
       padding: 10px;
@@ -40,23 +41,26 @@
       margin-bottom: 20px;
       transition: 1s;
 
-      @include devices-max-width-480px{
-        height: 550px;
+      @include devices-min-width-320px{
+        height: 500px;
       }
-      @include devices-max-width-320px{
+      @include devices-min-width-480px{
+        height: 620px;
+      }
+      @include devices-min-width-600px{
+        height: 460px;
+      }
+      @include devices-min-width-800px{
+        height: 520px;
+      }
+      @include devices-min-width-768px{
         height: 490px;
       }
-
-      &:hover{
-        @include devices-max-width-600px{
-          height: 470px;
-        }
-        @include devices-max-width-480px{
-          height: 630px;
-        }
-          @include devices-max-width-320px{
-            height: 500px;
-          }
+      @include devices-min-width-992px{
+        height: 470px;
+      }
+      @include devices-min-width-1200px{
+        height: 430px;
       }
 
       .meta_info {
@@ -118,12 +122,26 @@
           flex-direction: column;
           align-items: center;
 
-          @include devices-max-width-480px{
-            height: 520px;
+          @include devices-min-width-320px{
+            height: 470px;
           }
-
-          @include devices-max-width-320px{
-            height: 430px;
+          @include devices-min-width-480px{
+            height: 600px;
+          }
+          @include devices-min-width-600px{
+            height: 440px;
+          }
+          @include devices-min-width-800px{
+            height: 470px;
+          }
+          @include devices-min-width-768px{
+            height: 460px;
+          }
+          @include devices-min-width-992px{
+            height: 440px;
+          }
+          @include devices-min-width-1200px{
+            height: 400px;
           }
 
           img {
@@ -214,15 +232,26 @@
           //height: 100%;
           height: 400px;
 
-          @include devices-max-width-600px{
-            height: 450px;
+          @include devices-min-width-320px{
+            height: 470px;
           }
-          @include devices-max-width-480px{
+          @include devices-min-width-480px{
             height: 600px;
           }
-
-          @include devices-max-width-320px{
-            height: 450px;
+          @include devices-min-width-600px{
+            height: 440px;
+          }
+          @include devices-min-width-800px{
+            height: 470px;
+          }
+          @include devices-min-width-768px{
+            height: 460px;
+          }
+          @include devices-min-width-992px{
+            height: 440px;
+          }
+          @include devices-min-width-1200px{
+            height: 400px;
           }
 
           backface-visibility: hidden;
