@@ -43,7 +43,6 @@
 
       @include devices-min-width-320px{
         height: 550px;
-
       }
 
       @include devices-min-width-480px {
@@ -52,6 +51,7 @@
       @include devices-min-width-600px {
         height: 450px;
       }
+
       margin-bottom: 10px;
 
       .meta_info {
@@ -164,6 +164,7 @@
             align-items: flex-start;
             margin-left: 20px;
             padding: 10px;
+            margin-top: 10px;
 
             i{
               color: $color-base;
@@ -236,12 +237,11 @@
         }
 
         .back_card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           padding: 10px;
-          position: absolute;
-          top: 0;
-          left: 0;
           width: 100%;
-          //height: 100%;
           height: 400px;
           @include devices-min-width-480px {
             height: 500px;
@@ -255,13 +255,25 @@
           background: $color-item;
           color: $color-grey;
           transform: rotateY(180deg);
-          display: flex;
-          flex-direction: column;
+
           @include shadow_block;
 
-          .text {
-            height: 360px;
-            overflow: hidden;
+          .tabs {
+            .nav-link{
+              &:hover{
+                background-color: $color-base;
+                color: $color-link-active;
+              }
+
+            }
+
+            .tab-content{
+              padding: 10px;
+              height: 330px;
+              overflow: hidden;
+              border: 1px solid $color-grey-light;
+              border-top: none;
+            }
           }
 
           .link_more {
