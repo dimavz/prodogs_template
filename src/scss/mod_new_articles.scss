@@ -43,6 +43,11 @@
 
           .content{
             top: 0 !important;
+
+            .title{
+              border-bottom: 1px dotted $color-base;
+              padding-bottom: 10px;
+            }
             .text{
               visibility: visible;
             }
@@ -112,13 +117,15 @@
             margin-bottom: 5px;
           }
           .title{
-            min-height: 120px;
+            max-height: 120px;
             margin-bottom: 10px;
+            overflow: hidden;
             h3{
               font-size: 16px;
 
               a{
                 color:$color-grey ;
+                text-decoration: none;
                 &:hover{
                   color: $color-link-base;
                 }
@@ -131,6 +138,7 @@
             visibility: hidden;
             max-height: 180px;
             overflow: hidden;
+            font-size: 14px;
           }
         }
 
