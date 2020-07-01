@@ -9,11 +9,11 @@
   .footer_top{
 
     .wrap_footer_top{
-      display: flex;
+      //display: flex;
       padding: 10px;
       margin-top: 10px;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      //flex-wrap: wrap;
+      //justify-content: space-between;
       color: $color-grey-light;
 
       h2{
@@ -26,17 +26,17 @@
 
       .left_block{
         padding: 5px;
-        width: 300px;
+        //width: 300px;
       }
 
       .center_block{
         padding: 5px;
-        width: 300px;
+        //width: 300px;
       }
 
       .right_block{
         padding: 5px;
-        width: 300px;
+        //width: 300px;
       }
     }
   }
