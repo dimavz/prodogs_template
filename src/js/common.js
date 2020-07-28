@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
     // Вывод формы авторизации пользователя
     $("#key").click(function () {
         $(".key_form").slideToggle(500);
