@@ -149,23 +149,43 @@
       padding-bottom: 5px;
       border-bottom: 1px dashed $color-tag;
 
-      .views, .comments, .likes, .bookmarks, .createdate, .editdate, .enddate {
+      div {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         margin-right: 10px;
+        color: lighten($color-base, 5%);
 
         i {
           margin-right: 5px;
           font-size: 18px;
-          color: $color-statistic-icon;
+          color: lighten($color-base, 5%);
         }
 
         span {
           margin-right: 5px;
-          color: $color-statistic-label;
+          color: lighten($color-base, 10%);
         }
       }
+
+
+      //.views, .comments, .likes, .bookmarks, .createdate, .editdate, .enddate {
+      //  display: flex;
+      //  flex-wrap: wrap;
+      //  align-items: center;
+      //  margin-right: 10px;
+      //
+      //  i {
+      //    margin-right: 5px;
+      //    font-size: 18px;
+      //    color: $color-statistic-icon;
+      //  }
+      //
+      //  span {
+      //    margin-right: 5px;
+      //    color: $color-statistic-label;
+      //  }
+      //}
       .comments{
         margin: 5px;
       }
