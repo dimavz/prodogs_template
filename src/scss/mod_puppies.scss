@@ -308,10 +308,17 @@
               padding: 10px;
               border: 1px solid $color-grey-light;
               border-top: none;
-              height: 155px;
+              height: 160px;
               overflow: hidden;
               @include devices-max-width-600px{
                 height: 195px;
+              }
+
+              .scrollspy{
+                position: relative;
+                height: 155px;
+                /*margin-top: .5rem;*/
+                overflow: auto;
               }
 
               .fields_contact{
