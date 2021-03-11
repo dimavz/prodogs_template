@@ -9,4 +9,8 @@ body{
 
 a{
   color: $color-link-base;
+  &:hover{
+    text-decoration: none;
+    color: lighten($color-link-base,15);
+  }
 }
